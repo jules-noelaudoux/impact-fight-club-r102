@@ -1,0 +1,17 @@
+/* Anchor button */
+.anchor {
+    background-color: #D1F75B;
+    border-radius: 100%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+}
+
+.anchor a {
+    text-decoration: none;
+    color: black;
+    top: 0;
+}
