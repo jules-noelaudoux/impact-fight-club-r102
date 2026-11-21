@@ -6,17 +6,26 @@
   font-family: "Inter", sans-serif;
 }
 
+body {
+  background-color: var(--page-bg);
+  color: var(--text-color);
+  font-size: var(--body-text-size);
+  line-height: 1.25; /* Not sure */
+  margin: 0;
+  padding: 0;
+}
+
 /* Variables */
 :root {
   --primary-color: #d1f75b;
   --secondary-color: #0e100f;
-  
+
   /* backgrounds */
   --page-bg: var(--secondary-color);
   --section-bg: #141714;
   --card-bg: #191d1a;
   --video-bg: #222921;
-  
+
   /* text colors */
   --text-color: #f4f5ed;
   --muted-text-color: #afb7ad;
@@ -26,7 +35,8 @@
 
   /* fonts */
   --font-family: "Inter", sans-serif;
-  --hero-font: "Fugaz One", sans-serif; /* Not sure if we use this / Not imported */
+  --hero-font:
+    "Fugaz One", sans-serif; /* Not sure if we use this / Not imported */
 
   --weight-regular: 400;
   --weight-medium: 500;
@@ -49,11 +59,8 @@
   --title-line-height: 1.2;
 }
 
-
-
-
 /* Navbar */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .header {
   height: 88px;
   position: fixed;
@@ -62,12 +69,12 @@
   width: 100%;
   padding: 20px 80px;
   justify-content: space-evenly;
-  background: transparent;
+  background-color: var(--page-bg);
   display: flex;
   justify-content: space-around;
   align-items: center;
   z-index: 1000;
-  border: var(--secondary-color) solid 1px;
+  border-bottom: var(--border-color) solid 1px;
 }
 .logo {
   background-color: var(--secondary-color);
@@ -82,7 +89,7 @@
 .navbar__navlink {
   height: 88px;
   font-size: 10px;
-  color: var(--primary-color);
+  color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
   margin-left: 20px;
@@ -98,8 +105,8 @@
   height: 44px;
   width: 202px;
   background-color: var(--secondary-color);
-  color: white;
-  border: var(--secondary-color) solid 2px;
+  color: var(--text-color);
+  border: var(--border-color) solid 2px;
   padding: 10px;
   border-radius: 4px;
   text-align: center;
@@ -136,7 +143,7 @@
   .navbutton .b1::after {
     content: "Style";
     font-size: 16px;
-    color: white;
+    color: var(--text-color);
   }
   .navbutton .b2::after {
     content: "Esssai";
@@ -173,26 +180,22 @@
   .navbutton .b1::after {
     content: "Style";
     font-size: 11px;
-    color: white;
+    color: var(--text-color);
   }
   .navbutton .b2::after {
     content: "\2630";
     font-size: 16px;
-    color: white;
+    color: var(--text-color);
   }
   .navbar {
     visibility: hidden;
   }
 }
 
-
-
-
 /* Main content */
 main {
   padding-top: 88px;
 }
-
 
 /* Anchor button */
 .anchor {
