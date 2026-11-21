@@ -83,10 +83,13 @@ body {
 }
 
 .navbar {
+  display: flex;
   justify-content: start;
 }
 
 .navbar__navlink {
+  display: flex;
+  align-items: center;
   height: 88px;
   font-size: 10px;
   color: var(--text-color);
@@ -95,31 +98,32 @@ body {
   margin-left: 20px;
 }
 
-.navbutton {
+.navbuttons {
   display: flex;
   justify-content: flex-end;
   padding-right: 16px;
 }
 
-.navbutton .b1 {
+.navbuttons .b1 {
   height: 44px;
   width: 202px;
   background-color: var(--secondary-color);
   color: var(--text-color);
   border: var(--border-color) solid 2px;
-  padding: 10px;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   text-align: center;
+  margin-right: 0.5rem;
 }
-.navbutton .b2 {
+.navbuttons .b2 {
   height: 44px;
   width: 202px;
   background-color: var(--primary-color);
   color: var(--secondary-color);
   border: var(--primary-color) solid 2px;
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   text-align: center;
+  margin-left: 0.5rem;
 }
 /* Modification pour tablette */
 @media screen and (max-width: 768px) {
