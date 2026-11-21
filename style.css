@@ -31,13 +31,11 @@
 .navbar {
   justify-content: start;
 }
-.navbar .a1,
-.navbar .a2,
-.navbar .a3,
-.navbar .a4 {
+
+.navbar__navlink {
   height: 88px;
   font-size: 10px;
-  color: 0.0469f8;
+  color: #0469f8;
   text-decoration: none;
   font-weight: 500;
   margin-left: 20px;
@@ -69,7 +67,7 @@
   border-radius: 4px;
   text-align: center;
 }
-/* modification pour tablette */
+/* Modification pour tablette */
 @media screen and (max-width: 768px) {
   .navbutton .b1 {
     height: 44px;
@@ -104,7 +102,7 @@
   }
 }
 
-/*modification pour mobile*/
+/* Mobile modifications */
 @media screen and (max-width: 390px) {
   .navbutton .b1 {
     height: 44px;
