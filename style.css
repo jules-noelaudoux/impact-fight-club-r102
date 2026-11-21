@@ -1,17 +1,162 @@
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* Navbar */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+.header {
+  height: 88px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 80px;
+  justify-content: space-evenly;
+  background: transparent;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+  border: black solid 1px;
+}
+.logo {
+  background-color: black;
+  height: 64px;
+  width: 232px;
+}
+
+.navbar {
+  justify-content: start;
+}
+.navbar .a1,
+.navbar .a2,
+.navbar .a3,
+.navbar .a4 {
+  height: 88px;
+  font-size: 10px;
+  color: 0.0469f8;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.navbutton {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 16px;
+}
+
+.navbutton .b1 {
+  height: 44px;
+  width: 202px;
+  background-color: black;
+  color: white;
+  border: black solid 2px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+.navbutton .b2 {
+  height: 44px;
+  width: 202px;
+  background-color: #d1f75b;
+  color: black;
+  border: #d1f75b solid 2px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+/* modification pour tablette */
+@media screen and (max-width: 768px) {
+  .navbutton .b1 {
+    height: 44px;
+    width: 100px;
+    font-size: 0;
+  }
+  .navbutton .b2 {
+    height: 44px;
+    width: 100px;
+    font-size: 0;
+  }
+  .logo {
+    height: 64px;
+    width: 64px;
+  }
+  .logo img {
+    content: url("icon.svg");
+  }
+  .navbutton .b1::after {
+    content: "Style";
+    font-size: 16px;
+    color: white;
+  }
+  .navbutton .b2::after {
+    content: "Esssai";
+    font-size: 16px;
+    color: black;
+  }
+  .navbar .a1,
+  .navbar .a4 {
+    visibility: hidden;
+  }
+}
+
+/*modification pour mobile*/
+@media screen and (max-width: 390px) {
+  .navbutton .b1 {
+    height: 44px;
+    width: 44px;
+    font-size: 0;
+  }
+  .navbutton .b2 {
+    height: 44px;
+    width: 44px;
+    background-color: black;
+    border: black;
+    font-size: 0;
+  }
+  .logo {
+    height: 64px;
+    width: 64px;
+  }
+  .logo img {
+    content: url("icon.svg");
+  }
+  .navbutton .b1::after {
+    content: "Style";
+    font-size: 11px;
+    color: white;
+  }
+  .navbutton .b2::after {
+    content: "\2630";
+    font-size: 16px;
+    color: white;
+  }
+  .navbar {
+    visibility: hidden;
+  }
+}
+
+
+
+
 /* Anchor button */
 .anchor {
-    background-color: #D1F75B;
-    border-radius: 100%;
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: sticky;
+  background-color: #d1f75b;
+  border-radius: 100%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
 }
 
 .anchor a {
-    text-decoration: none;
-    color: black;
-    top: 0;
+  text-decoration: none;
+  color: black;
+  top: 0;
 }
