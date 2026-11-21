@@ -91,7 +91,7 @@ body {
   display: flex;
   align-items: center;
   height: 88px;
-  font-size: 10px;
+  font-size: var(--small-text-size);
   color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
@@ -127,12 +127,12 @@ body {
 }
 /* Modification pour tablette */
 @media screen and (max-width: 768px) {
-  .navbutton .b1 {
+  .navbuttons .b1 {
     height: 44px;
     width: 100px;
     font-size: 0;
   }
-  .navbutton .b2 {
+  .navbuttons .b2 {
     height: 44px;
     width: 100px;
     font-size: 0;
