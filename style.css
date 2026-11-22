@@ -279,7 +279,12 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: sticky;
+  position: fixed;
+  text-decoration: none;
+  right: 1rem;
+  font-size: 1.5rem;
+  bottom: 1rem;
+  z-index: 1000;
 }
 
 .anchor a {
