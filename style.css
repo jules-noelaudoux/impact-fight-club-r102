@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 /* Global styles */
 * {
   /* margin: 0;
   padding: 0; */
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family);
 }
 
 body {
@@ -60,26 +62,25 @@ body {
 }
 
 /* Navbar */
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 .header {
-  height: 88px;
+  height: 5.5rem;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 80px;
+  padding: 1.25rem 5rem;
   justify-content: space-evenly;
   background-color: var(--page-bg);
   display: flex;
   justify-content: space-around;
   align-items: center;
   z-index: 1000;
-  border-bottom: var(--border-color) solid 1px;
+  border-bottom: var(--border-color) solid 0.0625rem;
 }
 .logo {
   background-color: var(--secondary-color);
-  height: 64px;
-  width: 232px;
+  height: 4rem;
+  width: 14.5rem;
 }
 
 .navbar {
@@ -90,37 +91,37 @@ body {
 .navbar__navlink {
   display: flex;
   align-items: center;
-  height: 88px;
+  height: 5.5rem;
   font-size: var(--small-text-size);
   color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
-  margin-left: 20px;
+  margin-left: 1.25rem;
 }
 
 .navbuttons {
   display: flex;
   justify-content: flex-end;
-  padding-right: 16px;
+  padding-right: 1rem;
 }
 
 .navbuttons .b1 {
-  height: 44px;
-  width: 202px;
+  height: 2.75rem;
+  width: 12.625rem;
   background-color: var(--secondary-color);
   color: var(--text-color);
-  border: var(--border-color) solid 2px;
+  border: var(--border-color) solid 0.125rem;
   border-radius: 0.25rem;
   text-align: center;
   margin-right: 0.5rem;
 }
 .navbuttons .b2 {
-  height: 44px;
-  width: 202px;
+  height: 2.75rem;
+  width: 12.625rem;
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  border: var(--primary-color) solid 2px;
-  padding: 10px;
+  border: var(--primary-color) solid 0.125rem;
+  padding: 0.625rem;
   border-radius: 0.25rem;
   text-align: center;
   margin-left: 0.5rem;
@@ -128,30 +129,30 @@ body {
 /* Modification pour tablette */
 @media screen and (max-width: 768px) {
   .navbuttons .b1 {
-    height: 44px;
-    width: 100px;
+    height: 2.75rem;
+    width: 6.25rem;
     font-size: 0;
   }
   .navbuttons .b2 {
-    height: 44px;
-    width: 100px;
+    height: 2.75rem;
+    width: 6.25rem;
     font-size: 0;
   }
   .logo {
-    height: 64px;
-    width: 64px;
+    height: 4rem;
+    width: 4rem;
   }
   .logo img {
     content: url("icon.svg");
   }
-  .navbutton .b1::after {
+  .navbuttons .b1::after {
     content: "Style";
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--text-color);
   }
-  .navbutton .b2::after {
+  .navbuttons .b2::after {
     content: "Esssai";
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--secondary-color);
   }
   .navbar .a1,
@@ -162,33 +163,33 @@ body {
 
 /* Mobile modifications */
 @media screen and (max-width: 390px) {
-  .navbutton .b1 {
-    height: 44px;
-    width: 44px;
+  .navbuttons .b1 {
+    height: 2.75rem;
+    width: 2.75rem;
     font-size: 0;
   }
-  .navbutton .b2 {
-    height: 44px;
-    width: 44px;
+  .navbuttons .b2 {
+    height: 2.75rem;
+    width: 2.75rem;
     background-color: var(--secondary-color);
-    border: var(--secondary-color) solid 2px;
+    border: var(--secondary-color) solid 0.125rem;
     font-size: 0;
   }
   .logo {
-    height: 64px;
-    width: 64px;
+    height: 4rem;
+    width: 4rem;
   }
   .logo img {
     content: url("icon.svg");
   }
-  .navbutton .b1::after {
+  .navbuttons .b1::after {
     content: "Style";
-    font-size: 11px;
+    font-size: 0.6875rem;
     color: var(--text-color);
   }
-  .navbutton .b2::after {
+  .navbuttons .b2::after {
     content: "\2630";
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--text-color);
   }
   .navbar {
@@ -198,15 +199,15 @@ body {
 
 /* Main content */
 main {
-  padding-top: 88px;
+  padding-top: 5.5rem;
 }
 
 /* Anchor button */
 .anchor {
   background-color: var(--primary-color);
   border-radius: 100%;
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
