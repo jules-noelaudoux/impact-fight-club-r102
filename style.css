@@ -1,0 +1,220 @@
+/* Global styles */
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--page-bg);
+  color: var(--text-color);
+  font-size: var(--body-text-size);
+  line-height: 1.25; /* Not sure */
+  margin: 0;
+  padding: 0;
+}
+
+/* Variables */
+:root {
+  --primary-color: #d1f75b;
+  --secondary-color: #0e100f;
+
+  /* backgrounds */
+  --page-bg: var(--secondary-color);
+  --section-bg: #141714;
+  --card-bg: #191d1a;
+  --video-bg: #222921;
+
+  /* text colors */
+  --text-color: #f4f5ed;
+  --muted-text-color: #afb7ad;
+  --button-text-color: var(--secondary-color);
+
+  --border-color: #353c36;
+
+  /* fonts */
+  --font-family: "Inter", sans-serif;
+  --hero-font:
+    "Fugaz One", sans-serif; /* Not sure if we use this / Not imported */
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-bold: 700;
+  --weight-black: 900;
+
+  /* desktop font sizes
+  taken from the Figma template */
+
+  --small-text-size: 0.75rem;
+  --button-text-size: 0.875rem;
+  --body-text-size: 1rem;
+  --intro-text-size: 1.3125rem;
+  --card-title-size: 1.5625rem;
+  --section-title-size: 2.25rem;
+  --hero-title-size: 7rem;
+
+  /* line heights */
+  --hero-line-height: 1.15;
+  --title-line-height: 1.2;
+}
+
+/* Navbar */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.header {
+  height: 88px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 80px;
+  justify-content: space-evenly;
+  background-color: var(--page-bg);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: var(--border-color) solid 1px;
+}
+.logo {
+  background-color: var(--secondary-color);
+  height: 64px;
+  width: 232px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: start;
+}
+
+.navbar__navlink {
+  display: flex;
+  align-items: center;
+  height: 88px;
+  font-size: var(--small-text-size);
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.navbuttons {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 16px;
+}
+
+.navbuttons .b1 {
+  height: 44px;
+  width: 202px;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  border: var(--border-color) solid 2px;
+  border-radius: 0.25rem;
+  text-align: center;
+  margin-right: 0.5rem;
+}
+.navbuttons .b2 {
+  height: 44px;
+  width: 202px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: var(--primary-color) solid 2px;
+  padding: 10px;
+  border-radius: 0.25rem;
+  text-align: center;
+  margin-left: 0.5rem;
+}
+/* Modification pour tablette */
+@media screen and (max-width: 768px) {
+  .navbuttons .b1 {
+    height: 44px;
+    width: 100px;
+    font-size: 0;
+  }
+  .navbuttons .b2 {
+    height: 44px;
+    width: 100px;
+    font-size: 0;
+  }
+  .logo {
+    height: 64px;
+    width: 64px;
+  }
+  .logo img {
+    content: url("icon.svg");
+  }
+  .navbutton .b1::after {
+    content: "Style";
+    font-size: 16px;
+    color: var(--text-color);
+  }
+  .navbutton .b2::after {
+    content: "Esssai";
+    font-size: 16px;
+    color: var(--secondary-color);
+  }
+  .navbar .a1,
+  .navbar .a4 {
+    visibility: hidden;
+  }
+}
+
+/* Mobile modifications */
+@media screen and (max-width: 390px) {
+  .navbutton .b1 {
+    height: 44px;
+    width: 44px;
+    font-size: 0;
+  }
+  .navbutton .b2 {
+    height: 44px;
+    width: 44px;
+    background-color: var(--secondary-color);
+    border: var(--secondary-color) solid 2px;
+    font-size: 0;
+  }
+  .logo {
+    height: 64px;
+    width: 64px;
+  }
+  .logo img {
+    content: url("icon.svg");
+  }
+  .navbutton .b1::after {
+    content: "Style";
+    font-size: 11px;
+    color: var(--text-color);
+  }
+  .navbutton .b2::after {
+    content: "\2630";
+    font-size: 16px;
+    color: var(--text-color);
+  }
+  .navbar {
+    visibility: hidden;
+  }
+}
+
+/* Main content */
+main {
+  padding-top: 88px;
+}
+
+/* Anchor button */
+.anchor {
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+}
+
+.anchor a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  top: 0;
+}
