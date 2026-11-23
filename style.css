@@ -223,6 +223,7 @@ body {
 
   .navbuttons .b2 {
     display: none;
+    font-size: 0;
   }
 
   .mobile-menu {
@@ -263,8 +264,11 @@ body {
   .mobile-menu[open] .mobile-navbar {
     display: flex;
   }
+  .navbuttons .b2::after{
+    content : "\2630";
+    font-size : 16px;
+  }
 }
-
 /* Main content */
 main {
   padding-top: 5.5rem;
