@@ -435,7 +435,7 @@ footer {
     justify-content: space-between;
     gap : 250px;
 }
-.footer column {
+.footer-column {
     display: flex;
     flex-direction: column;
     gap: 8px;
