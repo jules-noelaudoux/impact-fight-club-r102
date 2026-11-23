@@ -38,6 +38,10 @@ body {
 h3 {
     color: var(--primary-color);
 }
+h4 {
+  color: var(--primary-color);
+  font-size: var(--footer-text-size);
+}
 /* Variables */
 :root {
   --primary-color: #d1f75b;
@@ -71,6 +75,7 @@ h3 {
 
   --small-text-size: 0.75rem;
   --button-text-size: 0.875rem;
+  --footer-text-size: 0.6875rem;
   --body-text-size: 1rem;
   --intro-text-size: 1.3125rem;
   --card-title-size: 1.5625rem;
@@ -438,7 +443,7 @@ footer {
 figure.footer-image {
     margin-left: 0;
 }
-nav a {
+.footer-nav-a {
     display: block;
     color: var(--text-color);
     text-decoration: none; /* Remove the bottom trait */
