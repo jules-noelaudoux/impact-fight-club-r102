@@ -35,6 +35,10 @@ body {
   padding: 0;
   margin-left: 5rem;
 }
+h2 {
+  font-size: var(--section-title-size);
+  margin: 0.5rem 0;
+}
 h3 {
     color: var(--primary-color);
 }
@@ -322,6 +326,46 @@ main {
   color: var(--secondary-color);
   top: 0;
 }
+/* Planning */
+.schedule {
+  padding-bottom: 2rem;
+  padding-right: 2rem;
+}
+.schedule-header p {
+  color: var(--muted-text-color);
+  font-size: var(--small-text-size);
+}
+.schedule-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+.schedule-card {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  min-width: 0;
+}
+.schedule-card h3 {
+  font-size: var(--small-text-size);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+  margin: 0 0 1rem;
+}
+.schedule-card time {
+  font-size: 1rem;
+  font-weight: var(--weight-bold);
+}
+.schedule-card p {
+  margin: 0.5 rem 0 1rem;
+}
+.schedule-card small {
+  display: block;
+  color: var(--muted-text-color);
+  font-size: var(--small-text-size);
+}
 /* Form */
 .avis-form {
     background-color: var(--card-bg);
@@ -448,20 +492,4 @@ figure.footer-image {
     color: var(--text-color);
     text-decoration: none; /* Remove the bottom trait */
     margin-bottom: 1rem;
-}
-.alternative-style {
-  --primary-color : white;
-  --secondary-color : black;
-  --page-bg:  var(--secondary-color);
-  --section-bg : yellow;
-  --card-bg: green;
-  --video-bg: red;
-
-  /* text colors */
-  --text-color: blue;
-  --muted-text-color: aqua;
-  --button-text-color: var(--primary-color);
-
-  --border-color: pink;
-  
 }
