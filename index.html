@@ -59,88 +59,113 @@
         <h2>Ton avis fait avancer le club.</h2>
         <p> Partage ton expérience. Les champs * sont obligatoires.</p>
         <!-- Formulaire -->
-        <form class ="avis-form" action="mailto:joey.lemaire@etu.univ-amu.fr" method="post" enctype="text/plain">
+        <form class="avis-form" action="mailto:joey.lemaire@etu.univ-amu.fr" method="post" enctype="text/plain">
             <ul>
-            <li>
-                <label for="name">Nom *</label>
-                <input type="text" id="name" name="user_name" />
-            </li>
-            <li>
-                <label for="mail">Adresse e-mail *</label>
-                <input type="email" id="mail" name="user_mail" />
-            </li>
-            <li>
-                <label for="discipline">Discipline patriquée *</label>
-                <select id="discipline" name="user_discipline">
-                    <option value="">-- Choisissez une discipline --</option>
-                    <option value="boxe">Boxe</option>
-                    <option value="muay">Muay thaï</option>
-                    <option value="mma">MMA</option>
-                </select>
-            </li>
-            <li>
-                <label for="grade">Votre note *</label>
-                <select id="grade" name="user_grade">
-                    <option value="">-- Choisissez une note --</option>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </li>
-            <li>
-                <label for="msg">Votre avis *</label>
-                <textarea id="msg" name="user_message"></textarea>
-            </li>
+                <li>
+                    <label for="name">Nom *</label>
+                    <input type="text" id="name" name="user_name" />
+                </li>
+                <li>
+                    <label for="mail">Adresse e-mail *</label>
+                    <input type="email" id="mail" name="user_mail" />
+                </li>
+                <li>
+                    <label for="discipline">Discipline patriquée *</label>
+                    <select id="discipline" name="user_discipline">
+                        <option value="">-- Choisissez une discipline --</option>
+                        <option value="boxe">Boxe</option>
+                        <option value="muay">Muay thaï</option>
+                        <option value="mma">MMA</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="grade">Votre note *</label>
+                    <select id="grade" name="user_grade">
+                        <option value="">-- Choisissez une note --</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="msg">Votre avis *</label>
+                    <textarea id="msg" name="user_message"></textarea>
+                </li>
             </ul>
             <nav class="form-button">
                 <button type="submit">Envoyer mon avis</button>
                 <p> Merci de rester respectueux</p>
             </nav>
         </form>
-      <!-- ---- -->
+        <!-- ---- -->
     </main>
     <footer>
-      <nav class ="footer-content">
-        <figure class="footer-image" href="#">
-            <a href="#">
-              <img src="icon-full.svg" alt="Impact Fight Club logo">
-            </a>
-            <figcaption class="footer-text">
-              La force du collectif
-            </figcaption>
-          </figure>
-        <nav class="footer-info">
-          <section class="footer-column">
-            <adress>
-            <h3>NOUS TROUVER</h3>
-            <p class="footer-text"> 413 avenue Gaston Berger<br>13100 Aix-en-Provence France</p>
-            <p class="footer-text">Adressse de référence de l'IUT</p>
-            <a href="https://iut.univ-amu.fr/fr/sites-geographiques/aix-en-provence">Préparer mon itinéraire</a>
-            </adress>
-          </section>
-          <section class="footer-column">
-            <h3>RESTONS CONNECTES</h3>
-            <nav>
-              <a href="https://www.instagram.com/">Instagram</a>
-              <a href="https://www.youtube.com/">Youtube</a>
-              <a href="https://www.ffboxe.com/">FFB</a>
-              <a href="https://www.fmmaf.fr/">FMMAF </a>
+        <nav class="footer-content">
+            <figure class="footer-image" href="#">
+                <a href="#">
+                    <img src="icon-full.svg" alt="Impact Fight Club logo">
+                </a>
+                <figcaption class="footer-text">
+                    La force du collectif
+                </figcaption>
+            </figure>
+            <nav class="footer-info">
+                <section class="footer-column">
+                    <adress>
+                        <h4>NOUS TROUVER</h4>
+                        <nav>
+                            <p class="footer-text"> 413 avenue Gaston Berger<br>13100 Aix-en-Provence France</p>
+                            <p class="footer-text">Adressse de référence de l'IUT</p>
+                            <a class="footer-nav-a"
+                                href="https://iut.univ-amu.fr/fr/sites-geographiques/aix-en-provence">Préparer mon
+                                itinéraire</a>
+                        </nav>
+                    </adress>
+                </section>
+                <section class="footer-column">
+                    <h4>RESTONS CONNECTES</h4>
+                    <nav class="footer-nav">
+                        <a class="footer-nav-a" href="https://www.instagram.com/">Instagram</a>
+                        <a class="footer-nav-a" href="https://www.youtube.com/">Youtube</a>
+                        <a class="footer-nav-a" href="https://www.ffboxe.com/">FFB</a>
+                        <a class="footer-nav-a" href="https://www.fmmaf.fr/">FMMAF </a>
+                    </nav>
+                </section>
             </nav>
-          </section>
+            <aside class="footer-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.4093953718107!2d5.448607876888117!3d43.514654861379185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c98d8e9e0b3e41%3A0x7640a64b13faa8f5!2sIUT%20d'Aix-Marseille%20site%20d'Aix-en-Provence!5e0!3m2!1sfr!2sfr!4v1795360198771!5m2!1sfr!2sfr"
+                    loading="lazy" allowfullscreen>
+                </iframe>
+            </aside>
         </nav>
-        <aside class="footer-map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.4093953718107!2d5.448607876888117!3d43.514654861379185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c98d8e9e0b3e41%3A0x7640a64b13faa8f5!2sIUT%20d'Aix-Marseille%20site%20d'Aix-en-Provence!5e0!3m2!1sfr!2sfr!4v1795360198771!5m2!1sfr!2sfr"
-            loading="lazy"
-            allowfullscreen>
-          </iframe>
-        </aside>
-      </nav>
-      <hr class ="footer-separator"></hr>
-      <p class="footer-text"><small>©Impact Fight Club Aix</small></p>
+        <hr class="footer-separator">
+        </hr>
+        <p class="footer-text"><small>©Impact Fight Club Aix</small></p>
     </footer>
+    
+    <!-- Section vidéo -->
+
+    <section class="video-section">
+        <figure class="video-container">
+            <video width="640" height="360" controls preload="metadata">
+                <source src="video/video-test.webm" type="video/webm">
+
+                <!-- Sous-titres (pour les malentendants) -->
+                <track kind="captions" src="video/sous-titres.fr.vtt" srclang="fr" label="Sous-titres français" default>
+
+
+                <!-- Description audio (pour les aveugles/malvoyants) -->
+                <track kind="descriptions" src="description-audio.fr.vtt" srclang="fr" label="Description audio">
+                Le navigateur ne supporte pas la balise vidéo.
+            </video>
+            <figcaption class="video-caption">Découvrez notre club en vidéo</figcaption>
+        </figure>
+    </section>
+
 </body>
+
 </html>
