@@ -35,6 +35,7 @@ body {
   margin: 0;
   padding: 0;
   margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 h3 {
@@ -181,6 +182,11 @@ h4 {
 
 /* Tablet display */
 @media screen and (max-width: 768px) {
+  body {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
   .header {
     height: 5rem;
     padding: 0 2.5rem;
@@ -228,6 +234,11 @@ h4 {
 /* https://coding.courses/styling-the-css-details-tag for customizing the dropdown menu */
 /* https://codepen.io/paulnta/pen/vYgOWGZ for hiding the details marker */
 @media screen and (max-width: 600px) {
+  body {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
   .header {
     height: 4.5rem;
     padding: 0 1.5rem;
@@ -361,7 +372,7 @@ form ul {
   grid-template-columns: 1fr 1fr;
   /* Space between the elements */
   gap: 20px;
-  
+
 }
 
 form li {
