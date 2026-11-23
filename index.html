@@ -11,9 +11,15 @@
 
 <body id="haut-de-page">
 
-    <!-- Navbar -->
+    <!-- Header -->
     <header class="header">
-        <a href="#" class="logo"><img src="icon-full.svg"></a>
+        <a href="#" class="logo">
+            <picture>
+                <!-- Show the icon on tablet and mobile -->
+                <source media="(max-width: 768px)" srcset="icon.svg">
+                <img src="icon-full.svg" alt="Impact Fight Club">
+            </picture>
+        </a>
         <nav class="navbar">
             <a href="#" class="a1 navbar__navlink">Le club</a>
             <a href="#" class="a2 navbar__navlink">Disciplines</a>
@@ -21,21 +27,35 @@
             <a href="#" class="a4 navbar__navlink">Avis</a>
         </nav>
         <nav class="navbuttons">
-            <button class="b1">Style alternatif</button>
-            <button class="b2"> Séance d'essai</button>
+            <!-- Navbar buttons -->
+            <button class="b1">
+                <span class="button-label-wide">Style alternatif</span>
+                <span class="button-label-compact">Style</span>
+            </button>
+            <button class="b2">
+                <span class="button-label-wide">Séance d'essai</span>
+                <span class="button-label-compact">Essai</span>
+            </button>
+            <!-- Dropdown menu for mobile -->
+            <details class="mobile-menu">
+                <summary class="menu-toggle">Menu</summary>
+                <nav class="mobile-navbar" aria-label="Menu mobile">
+                    <a href="#" class="navbar__navlink">Le club</a>
+                    <a href="#" class="navbar__navlink">Disciplines</a>
+                    <a href="#" class="navbar__navlink">Planning</a>
+                    <a href="#" class="navbar__navlink">Avis</a>
+                </nav>
+            </details>
         </nav>
     </header>
 
     <!-- Main content -->
     <main>
+        <!-- Anchor button -->
+        <a class="anchor" href="#haut-de-page" aria-label="Retour en haut">&#8593;</a>
         <h1> Club de combat</h1>
         <h2> Bienvenue dans notre super club de sports de combats à Aix-en-Provence</h2>
     </main>
-
-    <!-- Anchor button -->
-    <div class="anchor btn-primary">
-        <a href="#haut-de-page">&#8593;</a>
-    </div>
 </body>
 
 </html>
