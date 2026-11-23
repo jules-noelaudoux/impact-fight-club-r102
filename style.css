@@ -431,7 +431,7 @@ footer {
 
 .footer-content {
   display: grid;
-  /* 4 colonnes regulieres de meme largeur pour un espacement equilibre comme sur Figma */
+  /* 4 colonnes régulières de même largeur pour un espacement équilibré comme sur Figma */
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   align-items: start;
@@ -450,7 +450,7 @@ footer {
   margin: 0.75rem 0 0 0;
 }
 
-/* Par defaut (Desktop) : slogan sous le logo, masque dans la colonne reseaux */
+/* Par défaut (Desktop) : slogan sous le logo, masqué dans la colonne réseaux */
 .footer-slogan--main {
   display: block;
 }
@@ -539,6 +539,45 @@ footer {
   margin: 0;
 }
 
+/* Footer - Affichage Tablette (entre 601px et 768px) */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .footer-map {
+    display: none;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 3rem;
+  }
+
+  /* Colonne 1 (gauche) : Logo en haut, Nous trouver en dessous */
+  .footer-brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .footer-find-us {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  /* Colonne 2 (droite) : Restons connectés en haut */
+  .footer-socials {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  /* Sur tablette : on masque le slogan sous le logo et on affiche celui sous les réseaux (Figma) */
+  .footer-slogan--main {
+    display: none;
+  }
+
+  .footer-slogan--tablet {
+    display: block;
+    margin-top: 2rem;
+  }
+}
+
 /* Footer - Affichage Mobile (600px et moins) */
 @media screen and (max-width: 600px) {
   .footer-map {
@@ -603,5 +642,6 @@ footer {
 
   .footer-copyright {
     text-align: center;
+    padding-bottom: 4rem; /* Evite le chevauchement avec le bouton d'ancre */
   }
 }
