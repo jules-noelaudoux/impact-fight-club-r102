@@ -70,7 +70,7 @@
                 <input type="email" id="mail" name="user_mail" />
             </li>
             <li>
-                <label for="discipline">Discipline patriquée *</label>
+                <label for="discipline">Discipline pratiquée *</label>
                 <select id="discipline" name="user_discipline">
                     <option value="">-- Choisissez une discipline --</option>
                     <option value="boxe">Boxe</option>
@@ -103,36 +103,39 @@
       <!-- ---- -->
     </main>
     <footer>
-      <nav class ="footer-content">
-        <figure class="footer-image" href="#">
-            <a href="#">
-              <img src="icon-full.svg" alt="Impact Fight Club logo">
-            </a>
-            <figcaption class="footer-text">
-              La force du collectif
-            </figcaption>
-          </figure>
-        <nav class="footer-info">
-          <section class="footer-column">
-            <adress>
+      <nav class="footer-content">
+        <!-- Colonne 1 : Logo et slogan principal -->
+        <div class="footer-brand">
+          <a href="#">
+            <img src="icon-full.svg" alt="Impact Fight Club logo">
+          </a>
+          <p class="footer-slogan footer-slogan--main">La force du collectif.</p>
+        </div>
+
+        <!-- Colonne 2 : Adresse et itinéraire -->
+        <section class="footer-column footer-find-us">
+          <address>
             <h4>NOUS TROUVER</h4>
-            <nav>
-                <p class="footer-text"> 413 avenue Gaston Berger<br>13100 Aix-en-Provence France</p>
-                <p class="footer-text">Adressse de référence de l'IUT</p>
-                <a class="footer-nav-a" href="https://iut.univ-amu.fr/fr/sites-geographiques/aix-en-provence">Préparer mon itinéraire</a>
-            </nav>
-            </adress>
-          </section>
-          <section class="footer-column">
-            <h4>RESTONS CONNECTES</h4>
-            <nav class="footer-nav">
-              <a class="footer-nav-a" href="https://www.instagram.com/">Instagram</a>
-              <a class="footer-nav-a" href="https://www.youtube.com/">Youtube</a>
-              <a class="footer-nav-a" href="https://www.ffboxe.com/">FFB</a>
-              <a class="footer-nav-a" href="https://www.fmmaf.fr/">FMMAF </a>
-            </nav>
-          </section>
-        </nav>
+            <p class="footer-address">413 avenue Gaston Berger<br>13100 Aix-en-Provence France</p>
+            <p class="footer-subtext">Adresse de référence IUT</p>
+            <a class="footer-nav-a footer-route" href="https://iut.univ-amu.fr/fr/sites-geographiques/aix-en-provence">Préparer mon itinéraire</a>
+          </address>
+        </section>
+
+        <!-- Colonne 3 : Réseaux sociaux et slogan tablette -->
+        <section class="footer-column footer-socials">
+          <h4>RESTONS CONNECTES</h4>
+          <nav class="footer-nav">
+            <a class="footer-nav-a" href="https://www.instagram.com/">Instagram</a>
+            <a class="footer-nav-a" href="https://www.youtube.com/">Youtube</a>
+            <a class="footer-nav-a" href="https://www.ffboxe.com/">FFB</a>
+            <a class="footer-nav-a" href="https://www.fmmaf.fr/">FMMAF</a>
+          </nav>
+          <!-- Slogan affiche uniquement en bas de la colonne droite en mode tablette (Figma) -->
+          <p class="footer-slogan footer-slogan--tablet">La force du collectif.</p>
+        </section>
+
+        <!-- Colonne 4 : Carte interactive -->
         <aside class="footer-map">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.4093953718107!2d5.448607876888117!3d43.514654861379185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c98d8e9e0b3e41%3A0x7640a64b13faa8f5!2sIUT%20d'Aix-Marseille%20site%20d'Aix-en-Provence!5e0!3m2!1sfr!2sfr!4v1795360198771!5m2!1sfr!2sfr"
@@ -141,8 +144,8 @@
           </iframe>
         </aside>
       </nav>
-      <hr class ="footer-separator"></hr>
-      <p class="footer-text"><small>©Impact Fight Club Aix</small></p>
+      <hr class="footer-separator">
+      <p class="footer-copyright"><small>© Impact Fight Club Aix</small></p>
     </footer>
 </body>
 </html>
