@@ -247,6 +247,8 @@ body {
 
   .menu-toggle::before {
     content: "\2630";
+    font-size: 1.5rem;
+    line-height: 0.8; /* To align vertically the icon */
   }
 
   .menu-toggle::-webkit-details-marker {
