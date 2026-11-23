@@ -449,3 +449,19 @@ figure.footer-image {
     text-decoration: none; /* Remove the bottom trait */
     margin-bottom: 1rem;
 }
+.alternative-style {
+  --primary-color : white;
+  --secondary-color : black;
+  --page-bg:  var(--secondary-color);
+  --section-bg : yellow;
+  --card-bg: green;
+  --video-bg: red;
+
+  /* text colors */
+  --text-color: blue;
+  --muted-text-color: aqua;
+  --button-text-color: var(--primary-color);
+
+  --border-color: pink;
+  
+}
