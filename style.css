@@ -242,6 +242,11 @@ body {
     font-weight: var(--weight-bold);
     list-style: none;
     cursor: pointer;
+    font-family: system-ui, sans-serif;
+  }
+
+  .menu-toggle::before {
+    content: "\2630";
   }
 
   .menu-toggle::-webkit-details-marker {
