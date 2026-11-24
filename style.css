@@ -353,6 +353,58 @@ main {
   color: var(--secondary-color);
   top: 0;
 }
+/* Disciplines */
+.discipline {
+  padding-bottom: 2rem;
+  padding-right: 2rem;
+}
+.discipline-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+.discipline-card {
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  padding: 1rem;
+  height: 100%;
+}
+.discipline-card small {
+  display: inline-block;
+  vertical-align: middle;
+  color: var(--muted-text-color);
+  font-size: 0.6rem;
+}
+.discipline-card h3 {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  margin: 0.3rem 0;
+}
+.discipline-card p {
+  color: var(--muted-text-color);
+  font-size: var(--small-text-size);
+  margin: 0.5rem 0;
+}
+.discipline-card .disciplines-highlight {
+  color: var(--primary-color);
+}
+.discipline-card a {
+  display: block;
+  color : var(--text-color);
+  text-decoration: none;
+  font-size: var(--small-text-size);
+  font-weight: var(--weight-bold);
+  margin-top: 2rem;
+}
+.discipline-number {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: var(--weight-black);
+  margin-right: 1.5rem;
+}
 /* Planning */
 .schedule {
   padding-bottom: 2rem;
@@ -386,7 +438,7 @@ main {
   font-weight: var(--weight-bold);
 }
 .schedule-card p {
-  margin: 0.5 rem 0 1rem;
+  margin: 0.5rem 0 1rem;
 }
 .schedule-card small {
   display: block;
