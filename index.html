@@ -55,51 +55,66 @@
         <a class="anchor" href="#haut-de-page" aria-label="Retour en haut">&#8593;</a>
         <h1> Club de combat</h1>
         <h2> Bienvenue dans notre super club de sports de combats à Aix-en-Provence</h2>
-        <h3> 04 / Votre expérience</h3>
-        <h2>Ton avis fait avancer le club.</h2>
-        <p> Partage ton expérience. Les champs * sont obligatoires.</p>
-        <!-- Formulaire -->
-        <form class ="avis-form" action="mailto:joey.lemaire@etu.univ-amu.fr" method="post" enctype="text/plain">
-            <ul>
-            <li>
-                <label for="name">Nom *</label>
-                <input type="text" id="name" name="user_name" />
-            </li>
-            <li>
-                <label for="mail">Adresse e-mail *</label>
-                <input type="email" id="mail" name="user_mail" />
-            </li>
-            <li>
-                <label for="discipline">Discipline pratiquée *</label>
-                <select id="discipline" name="user_discipline">
-                    <option value="">-- Choisissez une discipline --</option>
-                    <option value="boxe">Boxe</option>
-                    <option value="muay">Muay thaï</option>
-                    <option value="mma">MMA</option>
-                </select>
-            </li>
-            <li>
-                <label for="grade">Votre note *</label>
-                <select id="grade" name="user_grade">
-                    <option value="">-- Choisissez une note --</option>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </li>
-            <li>
-                <label for="msg">Votre avis *</label>
-                <textarea id="msg" name="user_message"></textarea>
-            </li>
-            </ul>
-            <nav class="form-button">
-                <button type="submit">Envoyer mon avis</button>
-                <p> Merci de rester respectueux</p>
-            </nav>
-        </form>
+        <!-- Section 04: Review and form -->
+        <section class="avis-section" id="avis">
+            <!-- Review section header -->
+            <header class="avis-header">
+                <h3>04 / VOTRE EXPÉRIENCE</h3>
+                <h2>Ton avis fait avancer le club.</h2>
+                <p class="avis-subtitle">Partage ton expérience. Les champs * sont obligatoires.</p>
+            </header>
+
+            <!-- Form -->
+            <form class="avis-form" action="mailto:joey.lemaire@etu.univ-amu.fr" method="post" enctype="text/plain">
+                <ul>
+                    <li>
+                        <label for="name">Nom *</label>
+                        <!-- required makes the field mandatory before submitting -->
+                        <input type="text" id="name" name="user_name" placeholder="Votre nom" required />
+                    </li>
+                    <li>
+                        <label for="mail">Adresse e-mail *</label>
+                        <input type="email" id="mail" name="user_mail" placeholder="vous@exemple.fr" required />
+                    </li>
+                    <li>
+                        <label for="discipline">Discipline pratiquée *</label>
+                        <select id="discipline" name="user_discipline" required>
+                            <option value="">Choisir une discipline</option>
+                            <option value="boxe">Boxe</option>
+                            <option value="muay">Muay thaï</option>
+                            <option value="mma">MMA</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="grade">Votre note *</label>
+                        <!-- span used as inline container to align grade and hint without div -->
+                        <span class="form-note-row">
+                            <select id="grade" name="user_grade" required>
+                                <option value="">Ex : 4</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <span class="form-note-hint">Note de 1 à 5</span>
+                        </span>
+                    </li>
+                    <li class="form-full-width">
+                        <label for="msg">Votre avis *</label>
+                        <textarea id="msg" name="user_message" placeholder="Qu'avez-vous apprécié ? Que pouvons-nous améliorer ?" required></textarea>
+                    </li>
+                    <li class="form-full-width form-consent">
+                        <input type="checkbox" id="consent" name="user_consent" required />
+                        <label for="consent">J'accepte que mon avis et mon nom soient publiés. Mon e-mail reste privé. *</label>
+                    </li>
+                </ul>
+                <nav class="form-button">
+                    <button type="submit">Envoyer mon avis</button>
+                    <p>Merci de rester respectueux.</p>
+                </nav>
+            </form>
+        </section>
       <!-- ---- -->
     </main>
     <footer>
