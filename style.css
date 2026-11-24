@@ -515,15 +515,39 @@ main {
   color: var(--muted-text-color);
   font-size: var(--small-text-size);
 }
-/* Form */
-.avis-form {
+
+/* Review section and Form */
+.avis-section {
   background-color: var(--card-bg);
-  padding: 20px;
+  padding: 2rem 3rem;
+  margin-top: 2rem;
   color: var(--text-color);
   font-family: var(--font-family);
 }
 
-form ul {
+.avis-header h3 {
+  color: var(--primary-color);
+  font-size: var(--footer-text-size);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  margin: 0 0 0.75rem 0;
+}
+
+.avis-header h2 {
+  color: var(--text-color);
+  font-size: var(--section-title-size);
+  font-weight: var(--weight-bold);
+  line-height: var(--title-line-height);
+  margin: 0 0 0.625rem 0;
+}
+
+.avis-subtitle {
+  color: var(--muted-text-color);
+  font-size: var(--small-text-size);
+  margin: 0 0 1.75rem 0;
+}
+
+.avis-form ul {
   /* Remove "puces" */
   list-style: none;
   /* Remove the internal spaces */
@@ -532,26 +556,36 @@ form ul {
   margin: 0;
   /* Transform list in grid */
   display: grid;
-  /*Create two columns of same size */
+  /* Create two columns of same size */
   grid-template-columns: 1fr 1fr;
   /* Space between the elements */
-  gap: 20px;
-
+  gap: 1.25rem 2rem;
 }
 
-form li {
+.avis-form li {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
-form input,
-form select,
-form textarea {
+.avis-form label {
+  font-size: var(--small-text-size);
+  font-weight: var(--weight-medium);
+  color: var(--text-color);
+}
+
+/* Make element span across both grid columns */
+.form-full-width {
+  grid-column: 1 / -1;
+}
+
+.avis-form input,
+.avis-form select,
+.avis-form textarea {
   background-color: var(--page-bg);
   border: 1px solid var(--border-color);
-  border-radius: 3px;
-  padding: 12px;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
   color: var(--text-color);
   width: 100%;
   box-sizing: border-box;
@@ -559,19 +593,67 @@ form textarea {
   font-size: var(--button-text-size);
 }
 
+.avis-form input::placeholder,
+.avis-form textarea::placeholder {
+  color: var(--muted-text-color);
+}
+
+.avis-form textarea {
+  min-height: 5.625rem;
+  resize: vertical;
+}
+
+/* Align grade select and hint text on the same line */
+.form-note-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-note-row select {
+  width: 7.5rem;
+}
+
+.form-note-hint {
+  color: var(--muted-text-color);
+  font-size: var(--small-text-size);
+}
+
+/* Align consent checkbox horizontally with its label */
+.avis-form li.form-consent {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.form-consent input[type="checkbox"] {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  /* Color checked box with main site color */
+  accent-color: var(--primary-color);
+}
+
+.form-consent label {
+  font-weight: var(--weight-regular);
+  cursor: pointer;
+}
+
 /* End of Form */
 .form-button {
   display: flex;
   align-items: center;
-  gap: 20px;
-  margin-top: 20px;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .form-button button {
   background-color: var(--primary-color);
   color: var(--button-text-color);
   border: none;
-  padding: 14px 25px;
+  padding: 1rem 1.75rem;
   font-family: var(--font-family);
   font-size: var(--button-text-size);
   font-weight: var(--weight-bold);
@@ -581,89 +663,273 @@ form textarea {
 .form-button p {
   color: var(--muted-text-color);
   font-size: var(--small-text-size);
-  font-style: italic;
   margin: 0;
+}
+
+/* Form - Tablet and Mobile display */
+@media screen and (max-width: 768px) {
+  .avis-section {
+    padding: 2rem;
+  }
+
+  /* Switch to one column on tablet and mobile */
+  .avis-form ul {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  /* Full width button with text below */
+  .form-button {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .form-button button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Form - Mobile display (600px and below) */
+@media screen and (max-width: 600px) {
+  .avis-section {
+    padding: 1.5rem;
+  }
+
+  .avis-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .avis-form textarea {
+    min-height: 7.5rem;
+  }
+
+  .avis-form li.form-consent {
+    align-items: flex-start;
+  }
 }
 
 /* Footer */
 footer {
   background-color: var(--secondary-color);
+  border-top: 1px solid var(--border-color);
+  padding-top: 2.25rem;
+  margin-top: 3rem;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
+  display: grid;
+  /* 4 equal columns for balanced spacing like Figma */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  align-items: start;
 }
 
-.footer-map {
-  margin-top: 2rem;
-  width: 300px;
-  flex-shrink: 0;
-  margin-right: 5rem;
-}
-
-.footer-map iframe {
-  width: 100%;
-  height: 150px;
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
-
-}
-
-.footer-separator {
-  width: 95%;
-  /* Almost the large of the footer */
-  height: 1px;
-  /* Very skinny */
-  background-color: var(--border-color);
-  /* 20px of space above and centers itself horizontally */
-  margin: 20px auto 0;
-}
-
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 15px;
-}
-
-.footer-image img {
-  width: 230px;
+.footer-brand img {
+  width: 14.5rem;
   height: auto;
   display: block;
-  margin-left: 0;
 }
 
-.footer-text {
+.footer-slogan {
   color: var(--muted-text-color);
   font-family: var(--font-family);
-  font-size: var(--small-text-size);
-  margin-top: 10px;
-  margin-left: 0;
+  font-size: 1rem;
+  margin: 0.75rem 0 0 0;
 }
 
-.footer-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 250px;
+/* Default (Desktop): slogan under logo, hidden in socials column */
+.footer-slogan--main {
+  display: block;
 }
+.footer-slogan--tablet {
+  display: none;
+}
+
 .footer-column {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
 }
 
-figure.footer-image {
-  margin-left: 0;
+.footer-column address {
+  font-style: normal;
+}
+
+.footer-column h4 {
+  color: var(--primary-color);
+  font-size: var(--footer-text-size);
+  font-weight: var(--weight-bold);
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+}
+
+.footer-address {
+  color: var(--text-color);
+  font-size: 0.9375rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.footer-subtext {
+  color: var(--muted-text-color);
+  font-size: var(--footer-text-size);
+  margin: 0.625rem 0 0.875rem 0;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-nav-a {
   display: block;
   color: var(--text-color);
-  /* Remove the bottom line */
   text-decoration: none;
-  margin-bottom: 1rem;
+  font-size: var(--small-text-size);
+  margin-bottom: 0.625rem;
+  transition: color 0.2s ease;
+}
+
+.footer-nav-a:hover {
+  color: var(--primary-color);
+}
+
+.footer-route {
+  font-weight: var(--weight-bold);
+  font-size: 0.75rem;
+}
+
+.footer-map {
+  width: 100%;
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 9.375rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+}
+
+.footer-separator {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: var(--border-color);
+  margin: 1.5rem 0 1rem 0;
+}
+
+.footer-copyright {
+  text-align: left;
+  padding-bottom: 2rem;
+  color: var(--muted-text-color);
+  font-size: var(--footer-text-size);
+  margin: 0;
+}
+
+/* Footer - Tablet display (601px to 768px) */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .footer-map {
+    display: none;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 3rem;
+  }
+
+  /* Column 1 (left): Logo on top, Find us below */
+  .footer-brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .footer-find-us {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  /* Column 2 (right): Socials on top */
+  .footer-socials {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  /* On tablet: hide slogan under logo and show the one under socials (Figma) */
+  .footer-slogan--main {
+    display: none;
+  }
+
+  .footer-slogan--tablet {
+    display: block;
+    margin-top: 2rem;
+  }
+}
+
+/* Footer - Mobile display (600px and below) */
+@media screen and (max-width: 600px) {
+  .footer-map {
+    display: none;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-brand img {
+    margin: 0 auto;
+  }
+
+  .footer-slogan--main {
+    display: block;
+    text-align: center;
+    margin: 0.75rem 0 0 0;
+  }
+
+  .footer-slogan--tablet {
+    display: none;
+  }
+
+  .footer-find-us {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.5rem;
+  }
+
+  .footer-column address {
+    text-align: center;
+  }
+
+  .footer-address,
+  .footer-subtext {
+    text-align: center;
+  }
+
+  .footer-socials {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-nav {
+    align-items: center;
+  }
+
+  .footer-copyright {
+    text-align: center;
+    padding-bottom: 4rem; /* Avoid overlap with anchor button */
+  }
 }
