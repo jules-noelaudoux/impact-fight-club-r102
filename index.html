@@ -53,67 +53,76 @@
     <main>
         <!-- Anchor button -->
         <a class="anchor" href="#haut-de-page" aria-label="Retour en haut">&#8593;</a>
+        <!-- Section 00: Home -->
         <section class="home" id="home">
-            <article class="accueil-content">
+            <article class="home-content">
                 <h4>AIX-EN-PROVENCE / SPORTS DE COMBAT</h4>
-                <h1>TROUVE TA FORCE.</h1>
+                <h1>TROUVE<br>TA FORCE.</h1>
                 <p>Boxe anglaise, Muay Thaï, MMA. [Punchline]</p>
-                <a href="#contact" class="home-button">
+                <a href="#avis" class="home-button">
                     Réserver une séance d'essai
                 </a>
                 <small>Tous niveaux - Dès 16 ans - Aix-en-Provence</small>
             </article>
             <article class="impact-card">
-                <h4>00/ L'ESPRIT IMPACT</h4>
+                <h4>01 / L'ESPRIT IMPACT</h4>
                 <h2>LE RESPECT AVANT L'IMPACT.</h2>
-                <hr> <!-- Create a lign of separation --> 
+                <hr> <!-- Create a line of separation -->
                 <p>Je sais pas quoi mettre ici</p>
             </article>
             <nav class="home-nav">
-                <a href="discipline">01 DISCIPLINE</a>
-                <a href="respect">02 RESPECT</a>
-                <a href="depassement">03 DEPASSEMENT</a>
+                <a href="#discipline">01 DISCIPLINE</a>
+                <a href="#home">02 RESPECT</a>
+                <a href="#rendez-vous">03 DEPASSEMENT</a>
             </nav>
         </section>
 
+        <!-- Section 01: Disciplines -->
         <section class="discipline" id="discipline">
-            <h3>01/ LES DISCIPLINES</h3>
-            <h2>Trois façons de te dépasser</h2>
+            <h3>01 / LES DISCIPLINES</h3>
+            <h2>Trois façons de te dépasser.</h2>
             <p>Je sais pas quoi mettre ici</p>
-            
+
             <ul class="discipline-list">
                 <li>
                     <article class="discipline-card">
-                        <span class="discipline-number">01</span>
-                        <small>TECHNIQUE - CARDIO</small>
+                        <!-- span used as inline container to align number and subtitle without div -->
+                        <span class="discipline-card-header">
+                            <span class="discipline-number">01</span>
+                            <small>TECHNIQUE - CARDIO</small>
+                        </span>
                         <h3>Boxe anglaise</h3>
                         <p class="discipline-highlight">Je sais pas quoi mettre ici</p>
                         <p>Je sais pas quoi mettre ici</p>
-                        <!-- Il faut rajouter le lien ici -->
+                        <!-- Need to add link here -->
                         <a href="#">Découvrir la discipline</a>
-                     </article>
+                    </article>
                 </li>
                 <li>
                     <article class="discipline-card">
-                        <span class="discipline-number">02</span>
-                        <small>FORCE - COORDINATION</small>
+                        <span class="discipline-card-header">
+                            <span class="discipline-number">02</span>
+                            <small>FORCE - COORDINATION</small>
+                        </span>
                         <h3>Muay Thaï</h3>
                         <p class="discipline-highlight">Je sais pas quoi mettre ici</p>
                         <p>Je sais pas quoi mettre ici</p>
-                        <!-- Il faut rajouter le lien ici -->
+                        <!-- Need to add link here -->
                         <a href="#">Découvrir la discipline</a>
-                     </article>
+                    </article>
                 </li>
                 <li>
                     <article class="discipline-card">
-                        <span class="discipline-number">03</span>
-                        <small>COMBAT - MOBILITE</small>
+                        <span class="discipline-card-header">
+                            <span class="discipline-number">03</span>
+                            <small>COMBAT - MOBILITE</small>
+                        </span>
                         <h3>MMA</h3>
                         <p class="discipline-highlight">Je sais pas quoi mettre ici</p>
                         <p>Je sais pas quoi mettre ici</p>
-                        <!-- Il faut rajouter le lien ici -->
+                        <!-- Need to add link here -->
                         <a href="#">Découvrir la discipline</a>
-                     </article>
+                    </article>
                 </li>
             </ul>
         </section>
