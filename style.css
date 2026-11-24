@@ -432,6 +432,19 @@ main {
   text-decoration: none;
   font-size: var(--small-text-size);
 }
+
+/* Home - Tablet display */
+@media screen and (max-width: 768px) {
+  .home {
+    grid-template-columns: 1fr;
+    padding-top: 2rem;
+  }
+
+  /* Hide green card on tablet and mobile (Figma) */
+  .impact-card {
+    display: none;
+  }
+}
 /* Anchor button */
 .anchor {
   background-color: var(--primary-color);
@@ -544,6 +557,18 @@ main {
   line-height: 1;
 }
 
+/* Disciplines - Tablet display */
+@media screen and (max-width: 768px) {
+  .discipline-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Make the third card span full width on tablet (Figma) */
+  .discipline-list li:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
 /* Planning */
 .schedule {
   padding: 2.5rem 0;
@@ -609,6 +634,19 @@ main {
   color: var(--muted-text-color);
   font-size: var(--small-text-size);
   line-height: 1.4;
+}
+
+/* Planning - Tablet display */
+@media screen and (max-width: 768px) {
+  .schedule-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .schedule-card h3 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0.5rem;
+  }
 }
 
 /* Review section and Form */
