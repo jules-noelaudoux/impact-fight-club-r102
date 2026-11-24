@@ -445,6 +445,24 @@ main {
     display: none;
   }
 }
+
+/* Home - Mobile display */
+@media screen and (max-width: 600px) {
+  .home {
+    padding-top: 1.5rem;
+    gap: 1.75rem;
+  }
+
+  .home-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .home-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
 /* Anchor button */
 .anchor {
   background-color: var(--primary-color);
@@ -569,6 +587,17 @@ main {
   }
 }
 
+/* Disciplines - Mobile display */
+@media screen and (max-width: 600px) {
+  .discipline-list {
+    grid-template-columns: 1fr;
+  }
+
+  .discipline > h2 {
+    font-size: 1.75rem;
+  }
+}
+
 /* Planning */
 .schedule {
   padding: 2.5rem 0;
@@ -646,6 +675,54 @@ main {
     border-bottom: none;
     padding-bottom: 0;
     margin-bottom: 0.5rem;
+  }
+}
+
+/* Planning - Mobile display */
+@media screen and (max-width: 600px) {
+  .schedule-list {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .schedule-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .schedule-card {
+    /* position relative allows placing the + icon on the right */
+    position: relative;
+    padding: 1rem 2.5rem 1rem 1rem;
+  }
+
+  .schedule-card h3 {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .schedule-card time,
+  .schedule-card p {
+    display: inline;
+    font-size: var(--small-text-size);
+    font-weight: var(--weight-regular);
+    color: var(--muted-text-color);
+  }
+
+  .schedule-card small {
+    display: none;
+  }
+
+  /* Add green + icon on mobile cards (Figma) */
+  .schedule-card::after {
+    content: "+";
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: var(--weight-bold);
   }
 }
 
