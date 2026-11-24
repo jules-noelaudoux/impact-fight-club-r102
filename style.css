@@ -501,6 +501,50 @@ main {
   margin: 0;
 }
 
+/* Form - Tablet and Mobile display */
+@media screen and (max-width: 768px) {
+  .avis-section {
+    padding: 2rem;
+  }
+
+  /* Switch to one column on tablet and mobile */
+  .avis-form ul {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  /* Full width button with text below */
+  .form-button {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .form-button button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Form - Mobile display (600px and below) */
+@media screen and (max-width: 600px) {
+  .avis-section {
+    padding: 1.5rem;
+  }
+
+  .avis-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .avis-form textarea {
+    min-height: 7.5rem;
+  }
+
+  .avis-form li.form-consent {
+    align-items: flex-start;
+  }
+}
+
 /* Footer */
 footer {
   background-color: var(--secondary-color);
