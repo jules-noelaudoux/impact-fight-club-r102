@@ -1,0 +1,223 @@
+/* Footer */
+footer {
+  background-color: var(--secondary-color);
+  border-top: 1px solid var(--border-color);
+  padding-top: 2.25rem;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  display: grid;
+  /* 4 equal columns for balanced spacing like Figma */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.footer-brand img {
+  width: 14.5rem;
+  height: auto;
+  display: block;
+}
+
+.footer-slogan {
+  color: var(--muted-text-color);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  margin: 0.75rem 0 0 0;
+}
+
+/* Default (Desktop): slogan under logo, hidden in socials column */
+.footer-slogan--main {
+  display: block;
+}
+.footer-slogan--tablet {
+  display: none;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column address {
+  font-style: normal;
+}
+
+.footer-column h4 {
+  color: var(--primary-color);
+  font-size: var(--footer-text-size);
+  font-weight: var(--weight-bold);
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+}
+
+.footer-address {
+  color: var(--text-color);
+  font-size: 0.9375rem;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.footer-subtext {
+  color: var(--muted-text-color);
+  font-size: var(--footer-text-size);
+  margin: 0.625rem 0 0.875rem 0;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav-a {
+  display: block;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: var(--small-text-size);
+  margin-bottom: 0.625rem;
+  transition: color 0.2s ease;
+}
+
+.footer-nav-a:hover {
+  color: var(--primary-color);
+}
+
+.footer-route {
+  font-weight: var(--weight-bold);
+  font-size: 0.75rem;
+}
+
+.footer-map {
+  width: 100%;
+}
+
+.footer-map iframe {
+  width: 100%;
+  height: 9.375rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+}
+
+.footer-separator {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background-color: var(--border-color);
+  margin: 1.5rem 0 1rem 0;
+}
+
+.footer-copyright {
+  text-align: left;
+  padding-bottom: 2rem;
+  color: var(--muted-text-color);
+  font-size: var(--footer-text-size);
+  margin: 0;
+}
+
+/* Footer - Tablet display (601px to 768px) */
+@media screen and (min-width: 601px) and (max-width: 768px) {
+  .footer-map {
+    display: none;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 3rem;
+  }
+
+  /* Column 1 (left): Logo on top, Find us below */
+  .footer-brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .footer-find-us {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  /* Column 2 (right): Socials on top */
+  .footer-socials {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  /* On tablet: hide slogan under logo and show the one under socials (Figma) */
+  .footer-slogan--main {
+    display: none;
+  }
+
+  .footer-slogan--tablet {
+    display: block;
+    margin-top: 2rem;
+  }
+}
+
+/* Footer - Mobile display (600px and below) */
+@media screen and (max-width: 600px) {
+  .footer-map {
+    display: none;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-brand img {
+    margin: 0 auto;
+  }
+
+  .footer-slogan--main {
+    display: block;
+    text-align: center;
+    margin: 0.75rem 0 0 0;
+  }
+
+  .footer-slogan--tablet {
+    display: none;
+  }
+
+  .footer-find-us {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.5rem;
+  }
+
+  .footer-column address {
+    text-align: center;
+  }
+
+  .footer-address,
+  .footer-subtext {
+    text-align: center;
+  }
+
+  .footer-socials {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-nav {
+    align-items: center;
+  }
+
+  .footer-copyright {
+    text-align: center;
+    padding-bottom: 4rem; /* Avoid overlap with anchor button */
+  }
+}
