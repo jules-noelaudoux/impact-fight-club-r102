@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Impact Fight Club est un club de sports de combats localisé à Aix-en-Provence." />
+    <meta name="description" content="Impact Fight Club est un club de sports de combats localisé à Aix-en-Provence.">
     <title>Impact Club Aix</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="header.css">
@@ -19,7 +19,7 @@
             <picture>
                 <!-- Show the icon on tablet and mobile -->
                 <source media="(max-width: 768px)" srcset="icon.svg">
-                <img src="icon-full.svg" alt="Logo Impact Fight Club">
+                <img src="icon-full.svg" alt="Impact Fight Club logo">
             </picture>
         </a>
         <nav class="navbar">
@@ -58,7 +58,7 @@
         <!-- Section 00: Home -->
         <section class="home" id="home">
             <article class="home-content">
-                <h4>AIX-EN-PROVENCE / SPORTS DE COMBAT</h4>
+                <p class="home-eyebrow">AIX-EN-PROVENCE / SPORTS DE COMBAT</p>
                 <h1>TROUVE<br>TA FORCE.</h1>
                 <p>Boxe anglaise, Muay Thaï, MMA. [Punchline]</p>
                 <a href="#avis" class="home-button">
@@ -67,7 +67,7 @@
                 <small>Tous niveaux - Dès 16 ans - Aix-en-Provence</small>
             </article>
             <article class="impact-card">
-                <h4>01 / L'ESPRIT IMPACT</h4>
+                <p class="impact-tag">01 / L'ESPRIT IMPACT</p>
                 <h2>LE RESPECT AVANT L'IMPACT.</h2>
                 <hr> <!-- Create a line of separation -->
                 <p>Je sais pas quoi mettre ici</p>
@@ -138,31 +138,31 @@
             <ul class="schedule-list">
                 <li class="schedule-card">
                     <h3>LUNDI</h3>
-                    <time>18:00 - 19:30</time>
+                    <time datetime="18:00">18:00 - 19:30</time>
                     <p>Boxe anglaise</p>
                     <small>Tous niveaux<br>Salle Aix-en-Provence</small>
                 </li>
                 <li class="schedule-card">
                     <h3>MARDI</h3>
-                    <time>18:30 - 20:00</time>
+                    <time datetime="18:30">18:30 - 20:00</time>
                     <p>Muay Thaï</p>
                     <small>Tous niveaux<br>Salle Aix-en-Provence</small>
                 </li>
                 <li class="schedule-card">
                     <h3>MERCREDI</h3>
-                    <time>19:00 - 20:30</time>
+                    <time datetime="19:00">19:00 - 20:30</time>
                     <p>MMA</p>
                     <small>Tous niveaux<br>Salle Aix-en-Provence</small>
                 </li>
                 <li class="schedule-card">
                     <h3>JEUDI</h3>
-                    <time>18:00 - 19:30</time>
+                    <time datetime="18:00">18:00 - 19:30</time>
                     <p>Boxe anglaise</p>
                     <small>Tous niveaux<br>Salle Aix-en-Provence</small>
                 </li>
                 <li class="schedule-card">
                     <h3>VENDREDI</h3>
-                    <time>18:30 - 20:00</time>
+                    <time datetime="18:30">18:30 - 20:00</time>
                     <p>MMA</p>
                     <small>Tous niveaux<br>Salle Aix-en-Provence</small>
                 </li>
@@ -184,15 +184,15 @@
                     <li>
                         <label for="name">Nom *</label>
                         <!-- required makes the field mandatory before submitting -->
-                        <input type="text" id="name" name="user_name" placeholder="Votre nom" required />
+                        <input type="text" id="name" name="user_name" placeholder="Votre nom" required>
                     </li>
                     <li>
                         <label for="mail">Adresse e-mail *</label>
-                        <input type="email" id="mail" name="user_mail" placeholder="vous@exemple.fr" required />
+                        <input type="email" id="mail" name="user_mail" placeholder="vous@exemple.fr" required>
                     </li>
                     <li>
-                        <label for="discipline">Discipline pratiquée *</label>
-                        <select id="discipline" name="user_discipline" required>
+                        <label for="user-discipline">Discipline pratiquée *</label>
+                        <select id="user-discipline" name="user_discipline" required>
                             <option value="">Choisir une discipline</option>
                             <option value="boxe">Boxe</option>
                             <option value="muay">Muay thaï</option>
@@ -219,7 +219,7 @@
                         <textarea id="msg" name="user_message" placeholder="Qu'avez-vous apprécié ? Que pouvons-nous améliorer ?" required></textarea>
                     </li>
                     <li class="form-full-width form-consent">
-                        <input type="checkbox" id="consent" name="user_consent" required />
+                        <input type="checkbox" id="consent" name="user_consent" required>
                         <label for="consent">J'accepte que mon avis et mon nom soient publiés. Mon e-mail reste privé. *</label>
                     </li>
                 </ul>
@@ -229,7 +229,6 @@
                 </nav>
             </form>
         </section>
-      <!-- ---- -->
     </main>
     <footer>
       <nav class="footer-content">
@@ -243,8 +242,8 @@
 
         <!-- Column 2: Address and route -->
         <section class="footer-column footer-find-us">
+          <h3>NOUS TROUVER</h3>
           <address>
-            <h4>NOUS TROUVER</h4>
             <p class="footer-address">413 avenue Gaston Berger<br>13100 Aix-en-Provence France</p>
             <p class="footer-subtext">Adresse de référence IUT</p>
             <a class="footer-nav-a footer-route" href="https://iut.univ-amu.fr/fr/sites-geographiques/aix-en-provence">Préparer mon itinéraire</a>
@@ -253,7 +252,7 @@
 
         <!-- Column 3: Social links and tablet slogan -->
         <section class="footer-column footer-socials">
-          <h4>RESTONS CONNECTES</h4>
+          <h3>RESTONS CONNECTES</h3>
           <nav class="footer-nav">
             <a class="footer-nav-a" href="https://www.instagram.com/">Instagram</a>
             <a class="footer-nav-a" href="https://www.youtube.com/">Youtube</a>

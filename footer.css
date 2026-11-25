@@ -44,7 +44,7 @@ footer {
   font-style: normal;
 }
 
-.footer-column h4 {
+.footer-column h3 {
   color: var(--primary-color);
   font-size: var(--footer-text-size);
   font-weight: var(--weight-bold);

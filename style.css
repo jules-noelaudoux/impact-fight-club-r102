@@ -125,7 +125,7 @@ main {
   align-items: center;
 }
 
-.home-content h4 {
+.home-content .home-eyebrow {
   color: var(--primary-color);
   font-size: var(--footer-text-size);
   font-weight: var(--weight-bold);
@@ -179,9 +179,10 @@ main {
   min-height: 22rem;
 }
 
-.impact-card h4 {
+.impact-card .impact-tag {
   color: var(--secondary-color);
   font-size: var(--footer-text-size);
+  font-weight: var(--weight-bold);
   margin: 0;
 }
 
