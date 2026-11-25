@@ -333,23 +333,38 @@ main {
 /* Home */
 .home {
   display: grid;
-  grid-template-columns: 1fr 240px;
-  gap: 3rem;
+  grid-template-columns: 1fr 22rem;
+  gap: 2.5rem 3rem;
   padding-top: 3rem;
-  position: relative;
-  min-height: 380px;
+  padding-bottom: 2rem;
+  align-items: center;
 }
+
+.home-content h4 {
+  color: var(--primary-color);
+  font-size: var(--footer-text-size);
+  font-weight: var(--weight-bold);
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+}
+
 .home-content h1 {
   font-family: var(--hero-font);
-  font-size: var(--hero-title-size);
-  line-height:var(--hero-line-height);
-  margin: 1rem 0;
+  /* clamp adapts title size automatically between 3.5rem and desktop size */
+  font-size: clamp(3.5rem, 8vw, var(--hero-title-size));
+  line-height: 1.05;
+  margin: 0 0 1.25rem 0;
   font-style: italic;
+  font-weight: var(--weight-black);
+  text-transform: uppercase;
 }
+
 .home-content p {
   color: var(--muted-text-color);
-  margin: 1rem 0;
+  font-size: var(--intro-text-size);
+  margin: 0 0 1.5rem 0;
 }
+
 .home-button {
   display: inline-block;
   background-color: var(--primary-color);
@@ -358,48 +373,95 @@ main {
   font-size: var(--button-text-size);
   font-weight: var(--weight-bold);
   padding: 1rem 2rem;
-  border-radius: 4px;
-  margin: 1rem 0;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
 }
+
 .home-content small {
   display: block;
   color: var(--muted-text-color);
   font-size: var(--small-text-size);
 }
-/* Green Map */
+
+/* Green card */
 .impact-card {
   background-color: var(--primary-color);
   color: var(--secondary-color);
-  padding:0.5rem;
-  height: 230px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 22rem;
 }
+
 .impact-card h4 {
   color: var(--secondary-color);
+  font-size: var(--footer-text-size);
+  margin: 0;
 }
+
 .impact-card h2 {
-  font-size: 1.7rem;
-  line-height: var(--title-line-height);
-  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: var(--weight-black);
+  line-height: 1.15;
+  margin: 2rem 0 1.5rem 0;
 }
+
 .impact-card hr {
-  border:0;
-  border-top:1px solid var(--secondary-color);
-  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--secondary-color);
+  margin: 0 0 1.25rem 0;
 }
+
 .impact-card p {
   font-size: var(--small-text-size);
+  margin: 0;
 }
+
 .home-nav {
+  /* Make nav span across both columns */
   grid-column: 1 / -1;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   border-top: 1px solid var(--border-color);
-  padding-top: 1rem;
+  padding-top: 1.25rem;
 }
+
 .home-nav a {
   color: var(--muted-text-color);
   text-decoration: none;
   font-size: var(--small-text-size);
+}
+
+/* Home - Tablet display */
+@media screen and (max-width: 768px) {
+  .home {
+    grid-template-columns: 1fr;
+    padding-top: 2rem;
+  }
+
+  /* Hide green card on tablet and mobile (Figma) */
+  .impact-card {
+    display: none;
+  }
+}
+
+/* Home - Mobile display */
+@media screen and (max-width: 600px) {
+  .home {
+    padding-top: 1.5rem;
+    gap: 1.75rem;
+  }
+
+  .home-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .home-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 }
 /* Anchor button */
 .anchor {
@@ -425,95 +487,243 @@ main {
 }
 /* Disciplines */
 .discipline {
-  padding-bottom: 2rem;
-  padding-right: 2rem;
+  padding: 2.5rem 0;
 }
+
+.discipline > h3 {
+  color: var(--primary-color);
+  font-size: var(--footer-text-size);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  margin: 0 0 0.75rem 0;
+}
+
+.discipline > h2 {
+  font-size: var(--section-title-size);
+  font-weight: var(--weight-bold);
+  margin: 0 0 0.5rem 0;
+}
+
+.discipline > p {
+  color: var(--muted-text-color);
+  font-size: var(--small-text-size);
+  margin: 0;
+}
+
 .discipline-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  gap: 1.25rem;
   list-style: none;
   padding: 0;
   margin-top: 2rem;
 }
+
 .discipline-card {
   border: 1px solid var(--border-color);
   background-color: var(--card-bg);
-  padding: 1rem;
+  padding: 1.5rem;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
+
+.discipline-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
 .discipline-card small {
-  display: inline-block;
-  vertical-align: middle;
   color: var(--muted-text-color);
-  font-size: 0.6rem;
+  font-size: var(--footer-text-size);
+  text-transform: uppercase;
 }
+
 .discipline-card h3 {
   color: var(--text-color);
-  font-size: 1.2rem;
-  margin: 0.3rem 0;
+  font-size: var(--card-title-size);
+  margin: 0.5rem 0;
 }
+
 .discipline-card p {
   color: var(--muted-text-color);
   font-size: var(--small-text-size);
-  margin: 0.5rem 0;
+  margin: 0.375rem 0;
 }
-.discipline-card .disciplines-highlight {
+
+.discipline-card .discipline-highlight {
   color: var(--primary-color);
 }
+
 .discipline-card a {
   display: block;
-  color : var(--text-color);
+  color: var(--text-color);
   text-decoration: none;
   font-size: var(--small-text-size);
   font-weight: var(--weight-bold);
-  margin-top: 2rem;
+  /* Push link to the bottom of the card */
+  margin-top: auto;
+  padding-top: 2rem;
 }
+
 .discipline-number {
   color: var(--primary-color);
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: var(--weight-black);
-  margin-right: 1.5rem;
+  line-height: 1;
 }
+
+/* Disciplines - Tablet display */
+@media screen and (max-width: 768px) {
+  .discipline-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Make the third card span full width on tablet (Figma) */
+  .discipline-list li:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Disciplines - Mobile display */
+@media screen and (max-width: 600px) {
+  .discipline-list {
+    grid-template-columns: 1fr;
+  }
+
+  .discipline > h2 {
+    font-size: 1.75rem;
+  }
+}
+
 /* Planning */
 .schedule {
-  padding-bottom: 2rem;
-  padding-right: 2rem;
+  padding: 2.5rem 0;
 }
+
+.schedule-header h3 {
+  color: var(--primary-color);
+  font-size: var(--footer-text-size);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  margin: 0 0 0.75rem 0;
+}
+
+.schedule-header h2 {
+  font-size: var(--section-title-size);
+  font-weight: var(--weight-bold);
+  margin: 0 0 0.5rem 0;
+}
+
 .schedule-header p {
   color: var(--muted-text-color);
   font-size: var(--small-text-size);
+  margin: 0;
 }
+
 .schedule-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
+  gap: 1rem;
   list-style: none;
   padding: 0;
   margin-top: 2rem;
 }
+
 .schedule-card {
   background-color: var(--card-bg);
-  padding: 1rem;
+  padding: 1.25rem;
   min-width: 0;
 }
+
 .schedule-card h3 {
+  color: var(--primary-color);
   font-size: var(--small-text-size);
   border-bottom: 1px solid var(--border-color);
-  padding-bottom: 1rem;
+  padding-bottom: 0.875rem;
   margin: 0 0 1rem;
 }
+
 .schedule-card time {
-  font-size: 1rem;
+  display: block;
+  font-size: 1.125rem;
   font-weight: var(--weight-bold);
+  margin-bottom: 0.5rem;
 }
+
 .schedule-card p {
-  margin: 0.5rem 0 1rem;
+  margin: 0 0 1rem;
+  font-size: 1rem;
 }
+
 .schedule-card small {
   display: block;
   color: var(--muted-text-color);
   font-size: var(--small-text-size);
+  line-height: 1.4;
+}
+
+/* Planning - Tablet display */
+@media screen and (max-width: 768px) {
+  .schedule-list {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .schedule-card h3 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Planning - Mobile display */
+@media screen and (max-width: 600px) {
+  .schedule-list {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .schedule-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .schedule-card {
+    /* position relative allows placing the + icon on the right */
+    position: relative;
+    padding: 1rem 2.5rem 1rem 1rem;
+  }
+
+  .schedule-card h3 {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .schedule-card time,
+  .schedule-card p {
+    display: inline;
+    font-size: var(--small-text-size);
+    font-weight: var(--weight-regular);
+    color: var(--muted-text-color);
+  }
+
+  .schedule-card small {
+    display: none;
+  }
+
+  /* Add green + icon on mobile cards (Figma) */
+  .schedule-card::after {
+    content: "+";
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: var(--weight-bold);
+  }
 }
 
 /* Review section and Form */
