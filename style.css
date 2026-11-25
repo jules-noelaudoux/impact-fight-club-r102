@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url('../inter-latin-ext.woff2') format('woff2');
+  src: url('latin-ext.woff2') format('woff2');
   unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -14,7 +14,7 @@
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  src: url('../inter-latin.woff2') format('woff2');
+  src: url('latin.woff2') format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -381,6 +381,68 @@ main {
 
   .discipline > h2 {
     font-size: 1.75rem;
+  }
+}
+
+/* Video section */
+.video-section {
+  padding: 2.5rem 0;
+}
+
+.video-header h3 {
+  color: var(--primary-color);
+  font-size: var(--footer-text-size);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  margin: 0 0 0.75rem 0;
+}
+
+.video-header h2 {
+  font-size: var(--section-title-size);
+  font-weight: var(--weight-bold);
+  margin: 0 0 0.5rem 0;
+}
+
+.video-subtitle {
+  color: var(--muted-text-color);
+  font-size: var(--small-text-size);
+  margin: 0;
+}
+
+.video-figure {
+  margin: 2rem 0 0 0;
+}
+
+.video-player {
+  display: block;
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto;
+  /* Keep 4:3 ratio to match the archive video without side bars */
+  aspect-ratio: 4 / 3;
+  background-color: var(--video-bg);
+  border: 1px solid var(--border-color);
+}
+
+.video-info {
+  color: var(--muted-text-color);
+  font-size: var(--small-text-size);
+  margin-top: 1rem;
+}
+
+/* Video section - Mobile display */
+@media screen and (max-width: 600px) {
+  .video-header h2 {
+    font-size: 1.75rem;
+  }
+
+  /* Hide subtitle on mobile to match Figma template */
+  .video-subtitle {
+    display: none;
+  }
+
+  .video-figure {
+    margin-top: 1.5rem;
   }
 }
 

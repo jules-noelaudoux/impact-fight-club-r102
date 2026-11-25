@@ -129,6 +129,35 @@
             </ul>
         </section>
 
+        <!-- Section 02: Club video -->
+        <section class="video-section" id="club-video">
+            <header class="video-header">
+                <h3>02 / LE CLUB EN MOUVEMENT</h3>
+                <h2>Entre dans le ring.</h2>
+                <p class="video-subtitle">Une minute pour découvrir l'esprit Impact.</p>
+            </header>
+
+            <!-- figure wraps the video player and its caption semantically -->
+            <figure class="video-figure">
+                <!-- controls shows native play/pause, fullscreen and captions menu -->
+                <!-- preload="metadata" avoids downloading full video before play for performance -->
+                <video class="video-player" controls preload="metadata" poster="boxing-cats-poster.jpg">
+                    <source src="boxing-cats.mp4" type="video/mp4">
+                    <source src="boxing-cats.webm" type="video/webm">
+                    <!-- Standard subtitles in French -->
+                    <track kind="subtitles" src="subtitles-fr.vtt" srclang="fr" label="Français" default>
+                    <!-- Captions for deaf or hard-of-hearing users (visual and sound cues) -->
+                    <track kind="captions" src="captions-fr.vtt" srclang="fr" label="Français (Malentendants)">
+                    <!-- Audio description text track for screen readers -->
+                    <track kind="descriptions" src="descriptions-fr.vtt" srclang="fr" label="Audiodescription">
+                    Votre navigateur ne supporte pas la lecture de vidéos HTML5.
+                </video>
+                <figcaption class="video-info">
+                    Archive historique (1894) - 22s - Sous-titres et audiodescription disponibles
+                </figcaption>
+            </figure>
+        </section>
+
         <section class="schedule" id="rendez-vous">
             <nav class="schedule-header">
                 <h3>03/ LES RENDEZ-VOUS</h3>
