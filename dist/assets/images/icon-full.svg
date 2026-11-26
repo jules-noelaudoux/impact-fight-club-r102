@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232 64" width="232" height="64" fill="none" role="img" aria-label="Impact Fight Club Aix">
+  <!-- Monogramme : I fendu + point d'impact -->
+  <path d="M4 10H18V24L4 32V10Z" fill="#FFFFFF" />
+  <path d="M4 38L18 30V54H4V38Z" fill="#FFFFFF" />
+  <circle cx="29" cy="48" r="6" fill="#D4F647" />
+
+  <!-- Logotype IMPACT. -->
+  <rect x="52" y="10" width="8" height="32" fill="#FFFFFF" />
+  <path d="M66 10H73L81 25L89 10H96V42H89V22L81 36L73 22V42H66V10Z" fill="#FFFFFF" />
+  <path fill-rule="evenodd" d="M102 10H114.5C119.75 10 124 14.25 124 19.5C124 24.75 119.75 29 114.5 29H110V42H102V10ZM110 16.5V22.5H114C115.66 22.5 117 21.16 117 19.5C117 17.84 115.66 16.5 114 16.5H110Z" fill="#FFFFFF" />
+  <path fill-rule="evenodd" d="M137.5 10H144.5L154 42H146L144.2 35.5H137.8L136 42H128L137.5 10ZM141 18.5L138.8 29.5H143.2L141 18.5Z" fill="#FFFFFF" />
+  <path d="M184.3 14.7A16 16 0 1 0 184.3 37.3L179 32A8.5 8.5 0 1 1 179 20L184.3 14.7Z" fill="#FFFFFF" />
+  <path d="M188 10H210V17H203V42H195V17H188V10Z" fill="#FFFFFF" />
+  <circle cx="218.5" cy="37.5" r="4.5" fill="#D4F647" />
+
+  <!-- Sous-titre -->
+  <text x="52" y="54" fill="#9A9C98" font-family="Inter, &#39;Helvetica Neue&#39;, Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="2.3">
+    FIGHT CLUB <tspan fill="#D4F647">/</tspan> AIX
+  </text>
+</svg>

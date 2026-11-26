@@ -1,0 +1,1 @@
+const styleToggleBtn=document.getElementById("style-toggle"),altStyleLink=document.getElementById("alt-style"),defaultStyleLinks=document.querySelectorAll('link[data-theme="default"]');styleToggleBtn&&altStyleLink&&styleToggleBtn.addEventListener("click",()=>{const e=altStyleLink.disabled;altStyleLink.disabled=!e,defaultStyleLinks.forEach(t=>{t.disabled=e})});
