@@ -161,7 +161,9 @@ main {
   border-radius: 0.25rem;
   margin-bottom: 1rem;
 }
-
+.home-button:hover {
+  transform: scale(1.02);
+}
 .home-content small {
   display: block;
   color: var(--muted-text-color);
@@ -313,7 +315,9 @@ main {
   display: flex;
   flex-direction: column;
 }
-
+.discipline-card:hover {
+  transform: scale(1.02);
+}
 .discipline-card-header {
   display: flex;
   align-items: center;
@@ -353,7 +357,9 @@ main {
   margin-top: auto;
   padding-top: 2rem;
 }
-
+.discipline-card a:hover {
+  color : var(--primary-color);
+}
 .discipline-number {
   color: var(--primary-color);
   font-size: 2.5rem;
@@ -423,7 +429,9 @@ main {
   padding: 1.25rem;
   min-width: 0;
 }
-
+.schedule-card:hover {
+  transform: scale(1.02);
+}
 .schedule-card h3 {
   color: var(--primary-color);
   font-size: var(--small-text-size);
