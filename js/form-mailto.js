@@ -1,4 +1,3 @@
-// Handle review form submission by opening the email client with a prefilled template
 const avisForm = document.querySelector(".avis-form");
 
 if (avisForm) {
