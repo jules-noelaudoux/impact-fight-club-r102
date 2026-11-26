@@ -1,4 +1,3 @@
-/* Alternative simple student theme - light blue/gray layout */
 * {
   box-sizing: border-box;
 }
@@ -22,7 +21,7 @@ a {
   color: #1d3557;
 }
 
-/* Header: stacked and centered instead of fixed horizontal bar */
+/* Stacked header and centered instead of fixed horizontal bar */
 .header {
   background-color: #1d3557;
   color: #ffffff;
@@ -103,7 +102,7 @@ main section {
   margin-bottom: 1.5rem;
 }
 
-/* Home: reverse columns (card on the left, title on the right) */
+/* Home: reverse columns */
 .home {
   display: flex;
   flex-wrap: wrap;
@@ -168,7 +167,7 @@ main section {
   padding-top: 1rem;
 }
 
-/* Disciplines: simple 2-column grid */
+/* Disciplines: 2-column grid */
 .discipline-list {
   list-style: none;
   padding: 0;
@@ -255,7 +254,7 @@ main section {
   font-weight: normal;
 }
 
-/* Footer: dark blue centered layout */
+/* Footer */
 footer {
   background-color: #1d3557;
   color: #ffffff;

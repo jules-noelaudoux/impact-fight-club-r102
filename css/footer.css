@@ -31,7 +31,7 @@ footer {
   margin: 0.75rem 0 0 0;
 }
 
-/* Default (Desktop): slogan under logo, hidden in socials column */
+/* Desktop (Default) */
 .footer-slogan--main {
   display: block;
 }
@@ -126,7 +126,7 @@ footer {
   margin: 0;
 }
 
-/* Footer - Tablet display (601px to 768px) */
+/* Footer - Tablet 601px to 768px */
 @media screen and (min-width: 601px) and (max-width: 768px) {
   .footer-map {
     display: none;
@@ -165,7 +165,7 @@ footer {
   }
 }
 
-/* Footer - Mobile display (600px and below) */
+/* Footer - Mobile 600px */
 @media screen and (max-width: 600px) {
   .footer-map {
     display: none;
@@ -233,6 +233,6 @@ footer {
 
   .footer-copyright {
     text-align: center;
-    padding-bottom: 4rem; /* Avoid overlap with anchor button */
+    padding-bottom: 4rem; /* avoid overlap with anchor button */
   }
 }
