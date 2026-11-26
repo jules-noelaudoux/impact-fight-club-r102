@@ -156,6 +156,11 @@ main {
   text-transform: uppercase;
 }
 
+/* Force line break on hero title using CSS instead of <br> */
+.home-content h1 span {
+  display: block;
+}
+
 .home-content p {
   color: var(--muted-text-color);
   font-size: var(--intro-text-size);
@@ -531,6 +536,11 @@ main {
   color: var(--muted-text-color);
   font-size: var(--small-text-size);
   line-height: 1.4;
+}
+
+/* Line break in schedule details without <br> */
+.schedule-card small span {
+  display: block;
 }
 
 /* Planning - Tablet display */

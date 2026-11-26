@@ -59,6 +59,11 @@ footer {
   margin: 0;
 }
 
+/* Line break in address without <br> */
+.footer-address span {
+  display: block;
+}
+
 .footer-subtext {
   color: var(--muted-text-color);
   font-size: var(--footer-text-size);
