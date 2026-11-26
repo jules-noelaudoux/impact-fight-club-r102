@@ -33,13 +33,13 @@
                 <img src="assets/images/icon-full.svg" alt="Impact Fight Club logo">
             </picture>
         </a>
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Navigation principale">
             <a href="#home" class="a1 navbar__navlink">Le club</a>
             <a href="#discipline" class="a2 navbar__navlink">Disciplines</a>
             <a href="#rendez-vous" class="a3 navbar__navlink">Planning</a>
             <a href="#avis" class="a4 navbar__navlink">Avis</a>
         </nav>
-        <nav class="navbuttons">
+        <div class="navbuttons">
             <!-- Navbar buttons -->
             <button class="b1" id="style-toggle" type="button">
                 <span class="button-label-wide">Style alternatif</span>
@@ -51,7 +51,7 @@
             </a>
             <!-- Dropdown menu for mobile -->
             <details class="mobile-menu">
-                <summary class="menu-toggle"></summary>
+                <summary class="menu-toggle" aria-label="Ouvrir le menu"></summary>
                 <nav class="mobile-navbar" aria-label="Menu mobile">
                     <a href="#home" class="navbar__navlink">Le club</a>
                     <a href="#discipline" class="navbar__navlink">Disciplines</a>
@@ -59,7 +59,7 @@
                     <a href="#avis" class="navbar__navlink">Avis</a>
                 </nav>
             </details>
-        </nav>
+        </div>
     </header>
 
     <!-- Main content -->
@@ -83,7 +83,7 @@
                 <hr> <!-- Create a line of separation -->
                 <p>Un club à taille humaine : entraide, rigueur et progression à ton rythme.</p>
             </article>
-            <nav class="home-nav">
+            <nav class="home-nav" aria-label="Valeurs du club">
                 <a href="#discipline">01 DISCIPLINE</a>
                 <a href="#home">02 RESPECT</a>
                 <a href="#rendez-vous">03 DEPASSEMENT</a>
@@ -167,11 +167,11 @@
         </section>
 
         <section class="schedule" id="rendez-vous">
-            <nav class="schedule-header">
+            <header class="schedule-header">
                 <h3>03/ LES RENDEZ-VOUS</h3>
                 <h2>Fais de la place au progrès.</h2>
                 <p>Planning indicatif - Tous niveaux</p>
-            </nav>
+            </header>
             <ul class="schedule-list">
                 <li class="schedule-card">
                     <h3>LUNDI</h3>
@@ -260,15 +260,15 @@
                         <label for="consent">J'accepte que mon avis et mon nom soient publiés. Mon e-mail reste privé. *</label>
                     </li>
                 </ul>
-                <nav class="form-button">
+                <div class="form-button">
                     <button type="submit">Envoyer mon avis</button>
                     <p>Merci de rester respectueux.</p>
-                </nav>
+                </div>
             </form>
         </section>
     </main>
     <footer>
-      <nav class="footer-content">
+      <div class="footer-content">
         <!-- Column 1: Logo and main slogan -->
         <div class="footer-brand">
           <a href="#">
@@ -290,7 +290,7 @@
         <!-- Column 3: Social links and tablet slogan -->
         <section class="footer-column footer-socials">
           <h3>RESTONS CONNECTES</h3>
-          <nav class="footer-nav">
+          <nav class="footer-nav" aria-label="Réseaux sociaux et fédérations">
             <a class="footer-nav-a" href="https://www.instagram.com/">Instagram</a>
             <a class="footer-nav-a" href="https://www.youtube.com/">Youtube</a>
             <a class="footer-nav-a" href="https://www.ffboxe.com/">FFB</a>
@@ -303,12 +303,13 @@
         <!-- Column 4: Interactive map -->
         <aside class="footer-map">
           <iframe
+            title="Carte de localisation d'Impact Fight Club à l'IUT d'Aix-en-Provence"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.4093953718107!2d5.448607876888117!3d43.514654861379185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c98d8e9e0b3e41%3A0x7640a64b13faa8f5!2sIUT%20d'Aix-Marseille%20site%20d'Aix-en-Provence!5e0!3m2!1sfr!2sfr!4v1795360198771!5m2!1sfr!2sfr"
             loading="lazy"
             allowfullscreen>
           </iframe>
         </aside>
-      </nav>
+      </div>
       <hr class="footer-separator">
       <p class="footer-copyright"><small>© Impact Fight Club Aix</small></p>
     </footer>
