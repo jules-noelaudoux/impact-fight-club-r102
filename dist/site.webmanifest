@@ -1,0 +1,21 @@
+{
+  "name": "Impact Fight Club Aix",
+  "short_name": "Impact FC",
+  "icons": [
+    {
+      "src": "assets/favicon/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/favicon/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#0e100f",
+  "background_color": "#0e100f",
+  "display": "standalone"
+}

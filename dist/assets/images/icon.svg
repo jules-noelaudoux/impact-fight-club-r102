@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" role="img" aria-label="Impact Fight Club">
+  <rect width="64" height="64" fill="#111210" />
+  <path d="M15 10H29V24L15 32V10Z" fill="#FFFFFF" />
+  <path d="M15 38L29 30V54H15V38Z" fill="#FFFFFF" />
+  <circle cx="43" cy="48" r="6" fill="#D4F647" />
+</svg>
