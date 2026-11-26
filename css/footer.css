@@ -76,6 +76,8 @@ footer {
   text-decoration: none;
   font-size: var(--small-text-size);
   margin-bottom: 0.625rem;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
 
