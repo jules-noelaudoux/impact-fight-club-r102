@@ -6,7 +6,7 @@ if (avisForm) {
 
     const name = document.getElementById("name").value.trim();
     const mail = document.getElementById("mail").value.trim();
-    const discipline = document.getElementById("discipline").value;
+    const discipline = document.getElementById("user-discipline").value;
     const grade = document.getElementById("grade").value;
     const msg = document.getElementById("msg").value.trim();
 
