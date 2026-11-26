@@ -37,7 +37,9 @@
   display: flex;
   justify-content: start;
 }
-
+.navbar a:hover {
+  color: var(--primary-color);
+}
 .navbar__navlink {
   display: flex;
   align-items: center;
