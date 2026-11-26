@@ -14,6 +14,10 @@ footer {
   align-items: start;
 }
 
+.footer-brand {
+  margin: 0;
+}
+
 .footer-brand img {
   width: 14.5rem;
   height: auto;
@@ -59,6 +63,11 @@ footer {
   margin: 0;
 }
 
+/* Line break in address without <br> */
+.footer-address span {
+  display: block;
+}
+
 .footer-subtext {
   color: var(--muted-text-color);
   font-size: var(--footer-text-size);
@@ -76,6 +85,8 @@ footer {
   text-decoration: none;
   font-size: var(--small-text-size);
   margin-bottom: 0.625rem;
+  -webkit-transition: color 0.2s ease;
+  -moz-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
 
@@ -175,7 +186,11 @@ footer {
     text-align: center;
   }
 
-  .footer-brand img {
+  .footer-brand {
+  margin: 0;
+}
+
+.footer-brand img {
     margin: 0 auto;
   }
 

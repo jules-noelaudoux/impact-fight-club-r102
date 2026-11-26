@@ -20,8 +20,9 @@
 
 /* Global styles */
 * {
-  /* margin: 0;
-  padding: 0; */
+  /* Vendor prefixes for older browser compatibility */
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-family: var(--font-family);
 }
@@ -48,6 +49,17 @@ h3 {
 h4 {
   color: var(--primary-color);
   font-size: var(--footer-text-size);
+}
+
+/* Visible keyboard focus for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
 }
 
 /* Variables */
@@ -142,6 +154,11 @@ main {
   font-style: italic;
   font-weight: var(--weight-black);
   text-transform: uppercase;
+}
+
+/* Force line break on hero title using CSS instead of <br> */
+.home-content h1 span {
+  display: block;
 }
 
 .home-content p {
@@ -521,6 +538,11 @@ main {
   line-height: 1.4;
 }
 
+/* Line break in schedule details without <br> */
+.schedule-card small span {
+  display: block;
+}
+
 /* Planning - Tablet display */
 @media screen and (max-width: 768px) {
   .schedule-list {
@@ -575,6 +597,8 @@ main {
     position: absolute;
     right: 1rem;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     color: var(--primary-color);
     font-size: 1.5rem;

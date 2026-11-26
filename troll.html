@@ -6,67 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Séance d'essai surprise d'Impact Fight Club à Aix-en-Provence.">
     <title>Séance d'essai - Impact Club Aix</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        body {
-            background-image: url(assets/images/licorne.webp);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            height: 100%; /* It's terrible sryy lmfao */
-            border-radius: 1rem;
-        }
-        .back-link {
-            display: inline-block;
-            margin-top: 1.5rem;
-            padding: 0.75rem 1.5rem;
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-weight: var(--weight-bold);
-            border-radius: 0.25rem;
-        }
-        iframe {
-            width: 100%;
-            height: 50.375rem;
-            border: 1px solid var(--border-color);
-            border-radius: 0.25rem;
-            margin-top: 40rem;
-        }
-        h1 {
-            color: pink;
-            font-family: "Inter", sans-serif;
-            font-size: 3rem;
-            line-height: 1.05;
-            text-align: center;
-            font-style: italic;
-            font-weight: 900;
-            text-transform: uppercase;
-        }
-        p {
-            color: black;
-            text-align: center;
-            font-size: 1.5rem;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-    </style>
+    <!-- Favicons for all devices and browsers -->
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Impact FC">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#0e100f">
+    <link rel="stylesheet" href="css/style.css" data-theme="default">
+    <link rel="stylesheet" href="css/header.css" data-theme="default">
+    <link rel="stylesheet" href="css/troll.css" data-theme="default">
+    <link rel="stylesheet" href="css/style-alt.css" id="alt-style" disabled>
+    <script src="js/style-toggle.js" defer></script>
 </head>
-<body>
-    <header>
-        <nav aria-label="Retour au site">
-            <a href="index.html" class="back-link">Retour à l'accueil</a>
+
+<body class="troll-page">
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <picture>
+                <!-- Show the icon on tablet and mobile -->
+                <source media="(max-width: 768px)" srcset="assets/images/icon.svg">
+                <img src="assets/images/icon-full.svg" alt="Impact Fight Club logo">
+            </picture>
+        </a>
+        <nav class="navbar" aria-label="Navigation principale">
+            <a href="index.html#home" class="a1 navbar__navlink">Le club</a>
+            <a href="index.html#discipline" class="a2 navbar__navlink">Disciplines</a>
+            <a href="index.html#rendez-vous" class="a3 navbar__navlink">Planning</a>
+            <a href="index.html#avis" class="a4 navbar__navlink">Avis</a>
         </nav>
-        <h1>Séance d'essai avec vos licornes préférées</h1>
-        <p>Le seul club de sport de combat où l'on combat avec des calins, des paillettes et de l'amour</p>
+        <nav class="navbuttons" aria-label="Actions rapides">
+            <!-- Navbar buttons -->
+            <button class="b1" id="style-toggle" type="button">
+                <span class="button-label-wide">Style alternatif</span>
+                <span class="button-label-compact">Style</span>
+            </button>
+            <a href="index.html" class="b2">
+                <span class="button-label-wide">Retour accueil</span>
+                <span class="button-label-compact">Accueil</span>
+            </a>
+            <!-- Dropdown menu for mobile -->
+            <details class="mobile-menu">
+                <summary class="menu-toggle"></summary>
+                <nav class="mobile-navbar" aria-label="Menu mobile">
+                    <a href="index.html#home" class="navbar__navlink">Le club</a>
+                    <a href="index.html#discipline" class="navbar__navlink">Disciplines</a>
+                    <a href="index.html#rendez-vous" class="navbar__navlink">Planning</a>
+                    <a href="index.html#avis" class="navbar__navlink">Avis</a>
+                </nav>
+            </details>
+        </nav>
     </header>
-    <main>
-        <iframe
-            src="https://www.youtube.com/embed/QTh2oFMEXEg?si=J07VNdTVLMghqqwM"
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen></iframe>
+
+    <main class="troll-main">
+        <section class="troll-hero">
+            <h1>Séance d'essai avec vos licornes préférées</h1>
+            <p>Le seul club de sport de combat où l'on combat avec des câlins, des paillettes et de l'amour</p>
+            <nav aria-label="Retour au site">
+                <a href="index.html" class="back-link">Retour à l'accueil</a>
+            </nav>
+        </section>
+
+        <section class="troll-video" aria-label="Vidéo surprise">
+            <iframe
+                src="https://www.youtube.com/embed/QTh2oFMEXEg?si=J07VNdTVLMghqqwM"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </section>
     </main>
 </body>
 </html>
