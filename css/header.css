@@ -69,6 +69,9 @@
 }
 
 .navbuttons .b2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 2.75rem;
   width: 12.625rem;
   background-color: var(--primary-color);
@@ -77,6 +80,8 @@
   padding: 0.625rem;
   border-radius: 0.25rem;
   text-align: center;
+  text-decoration: none;
+  font-size: var(--button-text-size);
 }
 
 .button-label-compact {

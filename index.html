@@ -5,10 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Impact Fight Club est un club de sports de combats localisé à Aix-en-Provence.">
+    <!-- Social media meta tags -->
+    <meta property="og:title" content="Impact Fight Club Aix - Sports de combat">
+    <meta property="og:description" content="Boxe anglaise, Muay Thaï et MMA à Aix-en-Provence. Tous niveaux, dès 16 ans.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:url" content="https://jules-na.alwaysdata.net/">
+    <meta property="og:image" content="https://jules-na.alwaysdata.net/assets/images/boxing-cats-poster.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Impact Fight Club Aix - Sports de combat">
+    <meta name="twitter:description" content="Boxe anglaise, Muay Thaï et MMA à Aix-en-Provence. Tous niveaux, dès 16 ans.">
     <title>Impact Club Aix</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body id="haut-de-page">
@@ -18,8 +29,8 @@
         <a href="#" class="logo">
             <picture>
                 <!-- Show the icon on tablet and mobile -->
-                <source media="(max-width: 768px)" srcset="icon.svg">
-                <img src="icon-full.svg" alt="Impact Fight Club logo">
+                <source media="(max-width: 768px)" srcset="assets/images/icon.svg">
+                <img src="assets/images/icon-full.svg" alt="Impact Fight Club logo">
             </picture>
         </a>
         <nav class="navbar">
@@ -34,10 +45,10 @@
                 <span class="button-label-wide">Style alternatif</span>
                 <span class="button-label-compact">Style</span>
             </button>
-            <button class="b2">
-                <span href="troll.html" class="button-label-wide">Séance d'essai</span>
+            <a href="troll.html" class="b2">
+                <span class="button-label-wide">Séance d'essai</span>
                 <span class="button-label-compact">Essai</span>
-            </button>
+            </a>
             <!-- Dropdown menu for mobile -->
             <details class="mobile-menu">
                 <summary class="menu-toggle"></summary>
@@ -138,15 +149,15 @@
             <figure class="video-figure">
                 <!-- controls shows native play/pause, fullscreen and captions menu -->
                 <!-- preload="metadata" avoids downloading full video before play for performance -->
-                <video class="video-player" controls preload="metadata" poster="boxing-cats-poster.jpg">
-                    <source src="boxing-cats.mp4" type="video/mp4">
-                    <source src="boxing-cats.webm" type="video/webm">
+                <video class="video-player" controls preload="metadata" poster="assets/images/boxing-cats-poster.jpg">
+                    <source src="assets/video/boxing-cats.mp4" type="video/mp4">
+                    <source src="assets/video/boxing-cats.webm" type="video/webm">
                     <!-- Standard subtitles in French -->
-                    <track kind="subtitles" src="subtitles-fr.vtt" srclang="fr" label="Français" default>
+                    <track kind="subtitles" src="assets/video/subtitles-fr.vtt" srclang="fr" label="Français" default>
                     <!-- Captions for deaf or hard-of-hearing users (visual and sound cues) -->
-                    <track kind="captions" src="captions-fr.vtt" srclang="fr" label="Français (Malentendants)">
+                    <track kind="captions" src="assets/video/captions-fr.vtt" srclang="fr" label="Français (Malentendants)">
                     <!-- Audio description text track for screen readers -->
-                    <track kind="descriptions" src="descriptions-fr.vtt" srclang="fr" label="Audiodescription">
+                    <track kind="descriptions" src="assets/video/descriptions-fr.vtt" srclang="fr" label="Audiodescription">
                     Votre navigateur ne supporte pas la lecture de vidéos HTML5.
                 </video>
                 <figcaption class="video-info">
@@ -261,7 +272,7 @@
         <!-- Column 1: Logo and main slogan -->
         <div class="footer-brand">
           <a href="#">
-            <img src="icon-full.svg" alt="Impact Fight Club logo">
+            <img src="assets/images/icon-full.svg" alt="Impact Fight Club logo">
           </a>
           <p class="footer-slogan footer-slogan--main">La force du collectif.</p>
         </div>
