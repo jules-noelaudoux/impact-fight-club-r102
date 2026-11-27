@@ -14,4 +14,4 @@ AlwaysData - www.alwaysdata.com
 Sur Notion
 
 ## License
-Pas de licence
+[License MIT](LICENSE)
